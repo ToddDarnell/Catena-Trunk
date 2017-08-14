@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			DCR Queue
+		</screenTitle>    
+		<table>
+			<style>
+				<left>0px</left>
+				<top>0px</top>
+				<width>600px</width>
+			</style>           
+			<tbody>
+				<style>
+					<position>static</position>
+				</style>
+	            <tr>
+	                <style>
+	                    <position>static</position>
+	                </style>
+	                <td>
+	                    <style>
+	                        <position>static</position>
+	                    </style>
+	                    <table>
+							<style>     
+								<position>static</position>
+								<width>100%</width>
+							</style>
+							<id>dcr_requester_queue_table</id>
+	                    </table>
+	                </td>
+	            </tr>
+			</tbody>
+		</table>		
+	</screen>

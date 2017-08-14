@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			Add New Version
+		</screenTitle>
+		
+		<!-- Build the box for the background of fields -->
+		<box>
+			<id>docAddVersionBox</id>
+			<style>
+				<position>absolute</position>
+				<backgroundColor>Secondary</backgroundColor>
+				<left>0px</left>
+				<top>0px</top>
+				<width>600px</width>
+				<height>150px</height>
+				<color>Primary</color>
+				<fontWeight>bold</fontWeight>
+				<zIndex>1</zIndex>
+			</style>
+			<!-- Uploads Document and sends Document info to server -->
+			<button>
+				<id>addVerButton</id>
+				<text>Add</text>
+				<style>
+					<top>170px</top>
+					<left>400px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</button>
+			<button>
+				<id>backVerButton</id>
+				<text>Back</text>
+				<style>
+					<top>170px</top>
+					<left>150px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</button>
+			<form>
+				<encoding>multipart/form-data</encoding>
+				<method>post</method>
+				<id>verUploadForm</id>
+				<target>fileLoader</target>
+				<!-- Display Document Title -->
+				<div>
+					<id>CurrentDocTitle</id>
+					<align>center</align>
+					<style>
+						<color>Secondary</color>				
+						<backgroundColor>Primary</backgroundColor>
+						<top>0px</top>
+						<left>0px</left>
+						<width>600px</width>
+						<zIndex>2</zIndex>
+					</style>
+				</div>		
+				<!-- Document Version -->
+				<label>
+					<text>Version</text>
+					<style>
+						<top>50px</top>
+						<left>80px</left>
+						<width>75px</width>
+						<height>20px</height>
+						<zIndex>2</zIndex>
+					</style>
+				</label>
+				<input>
+					<type>text</type>
+					<id>NewVersion</id>
+					<name>NewVersion</name>
+					<maxLength>5</maxLength>
+					<title>The new Document version.</title>
+					<style>
+						<top>70px</top>
+						<left>80px</left>
+						<width>50px</width>
+						<height>22px</height>
+						<zIndex>2</zIndex>
+					</style>
+				</input>
+				<label>
+					<text>File Path</text>
+					<style>
+						<top>50px</top>
+						<left>250px</left>
+					</style>
+				</label>
+				<input>
+					<id>docVerUpload</id>
+					<name>docVerUpload</name>
+					<type>file</type>
+					<style>
+						<top>70px</top>
+						<left>250px</left>
+					</style>
+				</input>
+				<input>
+					<id>NewVersionDocID</id>
+					<type>hidden</type>
+					<name>NewVersionDocID</name>
+				</input>
+			</form>
+		</box>
+		<label>
+			<text>Uploading file....</text>
+			<id>verLoadingLabel</id>
+			<style>
+				<top>170px</top>
+				<left>450px</left>
+				<color>Primary</color>
+				<zIndex>2</zIndex>
+				<visibility>hidden</visibility>
+			</style>
+		</label>
+	</screen>

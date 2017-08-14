@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<screen> 
+	<screenTitle> Document Creation Request </screenTitle> 
+	<!-- Build the box for the background of fields --> 
+	<box> 
+		<id>docCreateRequestBox</id> 
+		<style> 
+			<position>absolute</position> 
+			<backgroundColor>Secondary</backgroundColor> 
+			<left>0px</left> 
+			<top>0px</top> 
+			<width>600px</width> 
+			<height>325px</height> 
+			<color>Primary</color> 
+			<fontWeight>bold</fontWeight>
+			<zIndex>1</zIndex>
+		</style> 
+		<!-- Document Title --> 
+		<label> 
+			<text>Title*</text> 
+			<style> 
+				<top>10px</top> 
+				<left>25px</left> 
+				<zIndex>2</zIndex> 
+			</style> 
+		</label> 
+		<input> 
+			<type>text</type> 
+			<id>docCreateRequestTitle</id> 
+			<maxLength>75</maxLength> 
+			<title>The new document name.</title> 
+			<style> 
+				<top>30px</top> 
+				<left>25px</left> 
+				<width>250px</width> 
+				<zIndex>2</zIndex> 
+			</style> 
+		</input> 
+		<!-- Document Description --> 
+		<label> 
+			<text>Description*</text> 
+			<style> 
+				<top>70px</top> 
+				<left>25px</left> 
+				<zIndex>2</zIndex> 
+				</style> 
+			</label> 
+		<textarea> 
+			<id>docCreateRequestDescription</id> 
+			<title>The new document description.</title> 
+			<style> 
+				<top>90px</top> 
+				<left>25px</left> 
+				<width>255px</width> 
+				<height>203px</height> 
+				<zIndex>2</zIndex> 
+			</style> 
+		</textarea>
+		<!-- Required Fields Label --> 
+		<label> 
+			<text>*Required Field</text> 
+			<style> 
+				<top>300px</top> 
+				<left>25px</left> 
+				<zIndex>2</zIndex> 
+				</style> 
+			</label> 
+		<!-- Document Type --> 
+		<label> 
+			<text>Type*</text> 
+			<style> 
+				<top>10px</top> 
+				<left>340px</left> 
+				<width>75px</width> 
+				<height>18px</height> 
+				<zIndex>2</zIndex>
+		  	</style> 
+		</label> 
+		<select> 
+			<id>docCreateRequestTypeList</id> 
+			<title>The type of document to be created.</title> 
+			<style> 
+				<top>30px</top> 
+				<left>340px</left> 
+				<width>150px</width> 
+				<zIndex>2</zIndex> 
+			</style> 
+		</select> 
+		<!-- Document Organization --> 
+		<label> 
+			<text>Organization*</text> 
+			<style> 
+				<top>70px</top> 
+				<left>340px</left> 
+				<width>75px</width> 
+				<height>18px</height> 
+				<zIndex>2</zIndex>
+		  	</style> 
+		</label> 
+		<select> 
+			<id>docCreateRequestOrgList</id> 
+			<title>The organization the document should belong to.</title> 
+			<style> 
+				<top>90px</top> 
+				<left>340px</left> 
+				<width>150px</width> 
+				<zIndex>2</zIndex> 
+			</style> 
+		</select> 
+		<!-- Document Priority -->
+		<label>
+			<text>Priority</text>
+			<title>The new document priority (optional).</title>
+			<style>
+			<top>130px</top>
+			<left>340px</left>
+			<zIndex>2</zIndex>
+			</style>
+		</label>
+		<select>
+			<id>docCreateRequestPriorityList</id>
+			<title>The new document priority (optional).</title>
+			<style>
+				<top>150px</top>
+				<left>340px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</select>
+		<!-- RQ# --> 
+		<label> 
+			<text>RQ#</text> 
+			<style> 
+				<top>190px</top> 
+				<left>340px</left> 
+				<zIndex>2</zIndex> 
+			</style> 
+		</label> 
+		<input> 
+			<type>text</type> 
+			<id>docCreateRequestRQNumber</id> 
+			<maxLength>75</maxLength> 
+			<title>The associated RQ# (optional).</title> 
+			<style> 
+				<top>210px</top> 
+				<left>340px</left> 
+				<width>100px</width> 
+				<zIndex>2</zIndex> 
+			</style> 
+		</input> 
+		<!-- Document Deadline Date -->  
+		<label>
+			<text>Deadline</text>
+			<title>The new document deadline (optional).</title>
+			<style>
+			<top>250px</top>
+			<left>340px</left>
+			</style>
+		</label>
+		<calendar>
+			<id>docCreateRequestCalendar</id>
+			<title>The new document deadline (optional).</title>
+			<tabIndex>5</tabIndex>
+			<top>270px</top>
+			<left>340px</left>                
+			<required>false</required>          
+		</calendar>
+	</box> 
+	<box> 
+		<style> 
+			<position>absolute</position> 
+			<backgroundColor>Secondary</backgroundColor> 
+			<left>0px</left> 
+			<top>375px</top> 
+			<width>600px</width> 
+			<height>20px</height> 
+			<zIndex>1</zIndex> 
+			<fontWeight>bold</fontWeight> 
+			<color>Primary</color> 
+		</style> 
+		<button> 
+			<id>docCreateRequestSubmit</id> 
+			<text>Submit</text> 
+			<title>Submit this document creation request for processing.</title> 
+			<style> 
+				<top>0px</top> 
+				<left>515px</left> 
+				<zIndex>2</zIndex> 
+			</style> 
+		</button> 
+		<button> 
+			<id>docCreateRequestClear</id> 
+			<text>Clear</text> 
+			<title>Clear this request</title> 
+			<style> 
+				<top>0px</top> 
+				<left>20px</left> 
+				<zIndex>2</zIndex> 
+			</style> 
+		</button> 
+	</box>
+	<form>
+		<encoding>multipart/form-data</encoding>
+		<method>post</method>
+		<id>docCreateRequestForm</id>
+		<target>fileLoader</target>
+	</form>	
+</screen>
+

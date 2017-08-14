@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<menu>
+		<SubMenu>
+			<title>Inventory</title>
+			<site>prod</site>
+			<tip>Inventory and Receiver Mangement</tip>
+			<menuItem>
+				<title>Add Receiver</title>
+				<site>prod</site>
+				<right>RMS_Admin</right>
+				<tip>Add one or more receivers to the system</tip>
+			</menuItem>
+			<menuItem>
+				<title>Approve Receiver</title>
+				<site>prod</site>
+				<right>RMS_Admin</right>
+				<tip>Approve adding one or more receivers to the system</tip>
+			</menuItem>
+			<menuItem>
+				<title>Search Receivers</title>
+				<site>prod</site>
+				<tip>Search receivers</tip>
+			</menuItem>
+			<menuItem>
+				<title>Assigned</title>
+				<site>dev</site>
+				<tip>Review your assigned receivers</tip>
+			</menuItem>
+			<menuItem>
+				<title>Restricted Numbers</title>
+				<right>RMS_Support</right>
+				<site>prod</site>
+				<tip>Add/remove numbers not allowed in the regular inventory</tip>
+			</menuItem>
+			<menuItem>
+				<title>Status</title>
+				<right>RMS_Support</right>
+				<site>prod</site>
+				<tip>Manage receiver status</tip>
+			</menuItem>
+			<menuItem>
+				<title>Models</title>
+				<right>RMS_Support</right>
+				<site>prod</site>
+				<tip>Manage receiver models</tip>
+			</menuItem>
+			<menuItem>
+				<title>Hardware</title>
+				<right>RMS_Support</right>
+				<site>prod</site>
+				<tip>Manage receiver hardware types</tip>
+			</menuItem>
+		</SubMenu>
+	</menu>

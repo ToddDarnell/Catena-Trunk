@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			Upload New Document
+		</screenTitle>
+		<!-- Build the box for the background of fields -->
+		<box>
+			<id>docAddBox</id>
+			<style>
+				<position>absolute</position>
+				<backgroundColor>Secondary</backgroundColor>
+				<left>0px</left>
+				<top>0px</top>
+				<width>600px</width>
+				<height>300px</height>
+				<color>Primary</color>
+				<fontWeight>bold</fontWeight>
+				<zIndex>1</zIndex>
+			</style>
+			<form>
+				<encoding>multipart/form-data</encoding>
+				<method>post</method>
+				<id>docAddForm</id>
+				<target>fileLoader</target>
+				<!-- Document File Path -->
+				<label>
+					<text>File Path</text>
+					<style>
+						<top>10px</top>
+						<left>25px</left>
+						<width>200</width>
+					</style>
+				</label>
+				<!-- This hidden field must be loaded/created before the
+					file input field. This field is saying we've
+					limited our file size to 6,000,000 bytes
+				-->
+				<input>
+					<type>hidden</type>
+					<name>MAX_FILE_SIZE</name>
+				</input>
+				<input>
+					<id>docAddUpload</id>
+					<name>docAddUpload</name>
+					<type>file</type>
+					<style>
+						<top>30px</top>
+						<left>25px</left>
+					</style>
+				</input>						
+				<!-- Document Title -->
+				<label>
+					<text>Title</text>
+					<style>
+						<top>80px</top>
+						<left>25px</left>
+						<width>18px</width>
+						<height>20px</height>
+						<zIndex>2</zIndex>
+					</style>
+				</label>
+				<input>
+					<type>text</type>
+					<name>DocTitle</name>
+					<id>DocTitle</id>
+					<maxLength>75</maxLength>
+					<title>The full Document name</title>
+					<style>
+						<top>100px</top>
+						<left>25px</left>
+						<width>250px</width>
+						<zIndex>2</zIndex>
+					</style>
+				</input>
+				<!-- Document Description -->
+				<label>
+					<text>Description</text>
+					<style>
+						<top>150px</top>
+						<left>25px</left>
+						<width>75px</width>
+						<height>18px</height>
+						<zIndex>2</zIndex>
+					</style>
+				</label>
+				<textarea>
+					<id>DocDescription</id>
+					<name>DocDescription</name>
+					<maxLength>350</maxLength>
+					<title>The Document description</title>
+					<style>
+						<top>170px</top>
+						<left>25px</left>
+						<width>255px</width>
+						<height>100px</height>
+						<zIndex>2</zIndex>
+					</style>
+				</textarea>
+				<!-- Document Organization -->
+				<label>
+	          		<text>Organization</text>
+	     	    	<style>
+			            <top>10px</top>
+			            <left>340px</left>
+			            <width>75px</width>
+			            <height>18px</height>
+			            <zIndex>2</zIndex>
+	          		</style>
+					</label>
+				<select>
+          			<id>DocOrgList</id>
+		          	<name>DocOrgList</name>
+		          	<title>The organization the Document belongs to.</title>
+		          	<style>
+		        		<top>30px</top>
+		        		<left>340px</left>
+		        		<width>150px</width>
+		        		<zIndex>2</zIndex>
+		  			</style>
+				</select>
+			<!-- Document Type -->
+			<label>
+				<text>Type</text>
+				<style>
+					<top>80px</top>
+					<left>340px</left>
+					<width>75px</width>
+					<height>18px</height>
+					<zIndex>2</zIndex>
+				</style>
+			</label>
+			<select>
+				<id>DocTypeList</id>
+				<name>DocTypeList</name>
+				<title>The Document type</title>
+				<style>
+					<top>100px</top>
+					<left>340px</left>
+					<width>150px</width>
+					<zIndex>2</zIndex>
+				</style>
+			</select>
+			<!-- Document Version -->
+			<label>
+				<text>Version</text>
+				<style>
+					<top>150px</top>
+					<left>340px</left>
+					<width>75px</width>
+					<height>20px</height>
+					<zIndex>2</zIndex>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>DocVersion</id>
+				<name>DocVersion</name>
+				<maxLength>5</maxLength>
+				<title>The Document version.</title>
+				<style>
+					<top>170px</top>
+					<left>340px</left>
+					<width>50px</width>
+					<zIndex>2</zIndex>
+				</style>
+			</input>
+		</form>
+			<!-- Uploads Document and sends Document info to server -->
+			<button>
+				<id>addDocButton</id>
+				<text>Add</text>
+				<style>
+					<top>320px</top>
+					<left>400px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</button>
+			<!-- Clears all the Document fields -->
+			<button>
+				<id>clearDocButton</id>
+				<text>Clear</text>
+				<style>
+					<top>320px</top>
+					<left>150px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</button>
+		</box>
+		<label>
+			<text>Uploading file....</text>
+			<id>docLoadingLabel</id>
+			<style>
+				<top>320px</top>
+				<left>450px</left>
+				<color>Primary</color>
+				<zIndex>2</zIndex>
+				<visibility>hidden</visibility>
+			</style>
+		</label>
+</screen>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<screen>
+	<screenTitle>Receiver Inventory</screenTitle>
+	<table>
+		<id>receiverInventory_Table</id>
+		<style>
+			<left>0px</left>
+			<top>0px</top>
+			<width>600px</width>
+		</style>
+	</table>
+</screen>

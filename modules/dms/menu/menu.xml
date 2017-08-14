@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<menu>
+		<SubMenu>
+			<title>Documentation</title>
+			<site>prod</site>
+			<tip>Documentation Management System</tip>
+			<menuItem>
+				<title>Upload Document</title>
+				<site>prod</site>
+				<right>DMS_Admin</right>
+				<tip>Upload a new document to DMS</tip>
+			</menuItem>
+			<menuItem>
+				<title>Search Documents</title>
+				<site>prod</site>
+				<right>DMS_Standard</right>
+				<tip>Search uploaded documents in DMS</tip>
+			</menuItem>
+			<menuItem>
+				<title>DCR</title>
+				<site>prod</site>
+				<right>DMS_Standard</right>
+				<tip>Document Creation Request</tip>
+			</menuItem>
+			<menuItem>
+				<title>Admin Queue</title>
+				<site>prod</site>
+				<right>DMS_Admin</right>
+				<tip>View open requests</tip>
+			</menuItem>
+			<menuItem>
+				<title>Assigned Queue</title>
+				<site>prod</site>
+				<right>DMS_Writer</right>
+				<tip>View your assigned requests</tip>
+			</menuItem>
+			<menuItem>
+				<title>DCR Queue</title>
+				<site>prod</site>
+				<right>DMS_Standard</right>
+				<tip>Review or Clarify your submitted requests</tip>
+			</menuItem>
+			<menuItem>
+				<title>DCR Search</title>
+				<site>prod</site>
+				<right>DMS_Standard</right>
+				<tip>Search requested DCRs</tip>
+			</menuItem>
+			<menuItem>
+				<title>Document Types</title>
+				<site>prod</site>
+				<right>DMS_Support</right>
+				<tip>Administrate the document Types for DMS</tip>
+			</menuItem>
+		</SubMenu>
+	</menu>

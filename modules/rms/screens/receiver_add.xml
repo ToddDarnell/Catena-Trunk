@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			Add Receiver
+		</screenTitle>
+		
+		<!-- build the box for these items -->
+		<box>
+			<style>
+				<position>absolute</position>
+				<backgroundColor>Secondary</backgroundColor>
+				<left>0px</left>
+				<top>0px</top>
+				<width>600px</width>
+				<height>180px</height>
+				<zIndex>1</zIndex>
+				<fontWeight>bold</fontWeight>
+				<color>Primary</color>
+			</style>
+			<!-- Receiver data input boxes -->
+			<label>
+				<text>Receiver</text>
+				<style>
+				<top>10px</top>
+				<left>45px</left>
+				<width>75px</width>
+				<height>20px</height>
+				<zIndex>2</zIndex>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>RecAddReceiver</id>
+				<imageName>RecAddReceiverImg</imageName>
+				<maxLength>10</maxLength>
+                <size>10</size>
+				<title>The 10 digit receiver number not including the R</title>
+				<style>
+					<top>30px</top>
+					<left>45px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</input>
+			<input>
+				<type>text</type>
+				<id>RecAddReceiverCRC</id>
+				<imageName>RecAddReceiverImg</imageName>
+				<maxLength>2</maxLength>
+                <size>2</size>
+				<title>2 digit CRC code</title>
+				<style>
+					<top>30px</top>
+					<left>135px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</input>
+			<img>
+				<src>
+					../image/icon_info.gif
+				</src>
+				<id>RecAddReceiverImg</id>
+				<style>
+					<top>30px</top>
+					<left>20px</left>
+					<zIndex>2</zIndex>
+				</style>
+				<title>Receiver number includes 10 digits in the first box and the 2 CRC digits in the second box. Do not add the R at the beginning.</title>
+			</img>
+			<!-- Smart card input boxes -->
+			<label>
+				<text>Smart Card</text>
+				<style>
+					<top>60px</top>
+					<left>45px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>RecAddSmartcard</id>
+				<imageName>RecAddSmartcardImg</imageName>
+				<maxLength>10</maxLength>
+                <size>10</size>
+				<title>The 10 digit smart card number without the S</title>
+				<style>
+					<top>80px</top>
+					<left>45px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</input>
+			<input>
+				<type>text</type>
+				<id>RecAddSmartcardCRC</id>
+				<imageName>RecAddSmartcardImg</imageName>
+				<maxLength>2</maxLength>
+                <size>2</size>
+				<title>2 digit CRC code</title>
+				<style>
+					<top>80px</top>
+					<left>135px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</input>
+			<img>
+				<src>
+					../image/icon_info.gif
+				</src>
+				<id>RecAddSmartcardImg</id>
+				<style>
+					<top>80px</top>
+					<left>20px</left>
+					<zIndex>2</zIndex>
+				</style>
+				<title>Smart card number includes 10 digits in the first box and the 2 CRC digits in the second box</title>
+			</img>
+			<!-- Hardware data -->
+			<label>
+				<text>Hardware</text>
+				<style>
+					<top>10px</top>
+					<left>305px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>RecAddHardware</id>
+				<maxLength>4</maxLength>
+				<size>4</size>
+				<title>The 4 digit hardware id</title>
+				<style>
+					<top>30px</top>
+					<left>305px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</input>
+			<img>
+				<src>
+					../image/icon_info.gif
+				</src>
+				<id>RecAddHardwareImg</id>
+				<style>
+					<top>30px</top>
+					<left>280px</left>
+					<zIndex>2</zIndex>
+				</style>
+				<title>4 digit hardware id</title>
+			</img>
+			<!-- Model data
+				All of this is read only
+			 -->
+			<div>
+				<id>RecAddModel</id>
+				<style>
+					<top>30px</top>
+					<left>375px</left>
+					<width>100px</width>
+					<zIndex>2</zIndex>
+				</style>
+			</div>
+			<label>
+				<text>Organization</text>
+				<style>
+					<top>60px</top>
+					<left>305px</left>
+				</style>
+			</label>
+			<select>
+				<id>RecAddHardwareOrgList</id>
+				<title>The receivers new organization</title>
+				<style>
+					<top>80px</top>
+					<left>305px</left>
+				</style>
+			</select>
+			<div>
+				<id>RecAddMsg</id>
+				<style>
+					<top>150px</top>
+					<left>40px</left>
+					<width>540px</width>
+					<zIndex>2</zIndex>
+				</style>
+			</div>
+		</box>
+		<button>
+			<text>Add</text>
+			<style>
+				<top>200px</top>
+				<left>350px</left>
+				<zIndex>2</zIndex>
+			</style>
+			<id>recAddButton</id>
+		</button>
+		<button>
+			<text>Clear</text>
+			<style>
+				<top>200px</top>
+				<left>150px</left>
+				<zIndex>2</zIndex>
+			</style>
+			<id>recAddClear</id>
+		</button>
+	</screen>

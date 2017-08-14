@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<screen>
+	<screenTitle>DCR Item Details</screenTitle>
+		<box>
+			<id>dcrDetailsDocInfoBox</id>
+			<style>
+				<position>absolute</position>
+				<backgroundColor>Secondary</backgroundColor>
+				<left>0px</left>
+				<top>0px</top>
+				<width>600px</width>
+				<height>65px</height>
+				<color>Primary</color>
+				<fontWeight>bold</fontWeight>
+				<zIndex>1</zIndex>
+			</style>	 
+	  		<!-- Returns user to referring page -->
+			<button>
+				<text>Back</text>
+		        <title>Return to the search document screen.</title>
+				<id>dcrDetailsBackButton</id>
+				<style>
+					<top>20px</top>
+					<left>520px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</button>		
+	    	<!-- Request # -->
+	      	<label>
+	          <text>Request</text>
+              <title>The request number.</title>
+	          <style>
+	              <top>0px</top>
+	              <left>25px</left>
+	              <zIndex>2</zIndex>
+	          </style>
+	        </label>
+	        <div>
+	        	<type>text</type>
+	            <id>dcrDetailsRequest</id>
+	            <maxLength>3</maxLength>
+	            <title>The request number.</title>
+	            <style>
+	                <top>20px</top>
+	                <left>25px</left>
+	                <width>75px</width>
+	                <zIndex>2</zIndex>
+					<backgroundColor>Tertiary</backgroundColor>
+	            </style>
+	        </div>	
+	        <!-- Document Title -->
+	      	<label>
+	          <text>Document Title</text>
+              <title>The DCR document title.</title>
+	          <style>
+	              <top>0px</top>
+	              <left>150px</left>
+	              <zIndex>2</zIndex>
+	          </style>
+	        </label>
+	        <div>
+	        	<type>text</type>
+	            <id>dcrDetailsDocTitle</id>
+	            <maxLength>3</maxLength>
+	            <title>The DCR document title.</title>
+	            <style>
+	                <top>20px</top>
+	                <left>150px</left>
+	                <width>350px</width>
+	                <zIndex>2</zIndex>
+					<backgroundColor>Tertiary</backgroundColor>
+	            </style>
+	        </div>	
+	    </box>
+		<box>
+			<id>dcrDetailsItemInfoBox</id>
+			<style>
+				<position>absolute</position>
+				<backgroundColor>Secondary</backgroundColor>
+				<left>0px</left>
+				<top>110px</top>
+				<width>600px</width>
+				<height>320px</height>
+				<color>Primary</color>
+				<fontWeight>bold</fontWeight>
+				<zIndex>1</zIndex>
+			</style>	        
+	    	<!-- Document Page Number of Request -->
+	      	<label>
+	          <text>Page #</text>
+              <title>The DCR page number.</title>
+	          <style>
+	              <top>10px</top>
+	              <left>25px</left>
+	              <zIndex>2</zIndex>
+	          </style>
+	        </label>
+	        <div>
+	        	<type>text</type>
+	            <id>dcrDetailsPageNum</id>
+	            <maxLength>3</maxLength>
+	            <title>The DCR page number.</title>
+	            <style>
+	                <top>30px</top>
+	                <left>25px</left>
+	                <width>75px</width>
+	                <zIndex>2</zIndex>
+					<backgroundColor>Tertiary</backgroundColor>
+	            </style>
+	        </div>	
+			<!-- Document Step Number of Request -->
+	      	<label>
+	          <text>Step #</text>
+	          <title>The DCR step number.</title>
+	          <style>
+	              <top>10px</top>
+	              <left>305px</left>
+	              <zIndex>2</zIndex>
+	          </style>
+	        </label>
+	        <div>
+	        	<type>text</type>
+	            <id>dcrDetailsStepNum</id>
+				<maxLength>10</maxLength>
+	            <title>The DCR step number.</title>
+	            <style>
+	                <top>30px</top>
+	                <left>305px</left>
+	                <width>85px</width>
+	                <zIndex>2</zIndex>
+					<backgroundColor>Tertiary</backgroundColor>
+	            </style>
+	        </div>	
+	      	<!-- The current step in the document the request is for -->
+	        <label>
+	          <text>Current Step / Observation</text>
+              <title>The description of the current step within the document.</title>
+	          <style>	
+	          	 <top>80px</top>
+	             <left>25px</left>
+				 <width>250px</width>
+				 <height>18px</height>
+				 <zIndex>2</zIndex>
+	          </style>
+	        </label>
+	        <div>
+	            <id>dcrDetailsCurrent</id>
+	            <title>The description of the current step within the document.</title>
+	            <style>
+	                <top>100px</top>
+	                <left>25px</left>
+	                <width>545px</width>
+   		            <height>75px</height>
+	                <zIndex>2</zIndex>
+					<backgroundColor>Tertiary</backgroundColor>
+					<overflow>auto</overflow>
+	            </style>
+	        </div>
+	        <!-- The description of the update for the request -->
+	        <label>
+	            <text>Requested Update</text>
+		        <title>The description of the requested update of the current step.</title>
+	            <style>
+	                <top>200px</top>
+	                <left>25px</left>
+					<width>175px</width>
+					<height>18px</height>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </label>
+	        <div>
+		        <id>dcrDetailsUpdate</id>
+		        <title>The description of the requested update of the current step.</title>
+		        <style>
+		            <top>220px</top>
+		            <left>25px</left>
+		            <width>545px</width>
+		            <height>75px</height>
+		            <zIndex>2</zIndex>
+					<backgroundColor>Tertiary</backgroundColor>
+					<overflow>auto</overflow>
+		        </style>
+		  	</div>
+		</box>
+		<box>
+			<id>dcrDetailsTPUInfoBox</id>
+			<style>
+				<position>absolute</position>
+				<backgroundColor>Secondary</backgroundColor>
+				<left>0px</left>
+				<top>475px</top>
+				<width>600px</width>
+				<height>200px</height>
+				<color>Primary</color>
+				<fontWeight>bold</fontWeight>
+				<zIndex>1</zIndex>
+				<visibility>hidden</visibility>
+			</style>
+		    <label>
+				<text>Tester</text>
+				<id>dcrDetailsReferenceLabel</id>
+				<title>The person that tested the issue.</title>
+				<style>
+					<top>10px</top>
+					<left>25px</left>
+					<zIndex>2</zIndex>
+					<visibility>hidden</visibility>
+				</style>
+			</label>
+			<div>
+				<id>dcrDetailsReference</id>
+				<maxLength>75</maxLength>
+				<title>The person that tested the issue.</title>
+				<style>
+					<top>30px</top>
+					<left>25px</left>
+					<width>150px</width>
+					<zIndex>2</zIndex>
+					<color>Primary</color>
+					<backgroundColor>Tertiary</backgroundColor>
+					<visibility>hidden</visibility>
+				</style>
+			</div>
+			<!-- The current step in the document the request is for -->
+	        <label>
+	          <text>Action Requested</text>
+              <id>dcrDetailsCommentLabel</id>
+	          <title>The description of the PM comments.</title>
+	          <style>	
+	          	 <top>80px</top>
+	             <left>25px</left>
+				 <width>175px</width>
+				 <height>18px</height>
+				 <zIndex>2</zIndex>
+				 <visibility>hidden</visibility>
+	          </style>
+	        </label>
+	        <div>
+	            <id>dcrDetailsComment</id>
+	         	<title>The description of the PM comments.</title>
+	            <style>
+	                <top>100px</top>
+	                <left>25px</left>
+	                <width>545px</width>
+		            <height>75px</height>
+	                <zIndex>2</zIndex>
+					<backgroundColor>Tertiary</backgroundColor>
+					<overflow>auto</overflow>
+					<visibility>hidden</visibility>
+	            </style>
+		  	</div>		
+		</box>
+</screen>

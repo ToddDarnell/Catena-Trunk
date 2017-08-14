@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>Restricted Numbers Admin</screenTitle>
+		<button>
+			<text>Submit</text>
+			<style>
+				<top>225px</top>
+				<left>435px</left>
+			</style>
+			<id>rec_resSubmit</id>
+		</button>
+		<page>
+			<style>
+				<fontWeight>bold</fontWeight>
+			</style>
+			<pageTitle>Add Receiver</pageTitle>
+			<label>
+				<text>Receiver</text>
+				<style>
+					<top>30px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>rec_resAddReceiver</id>
+				<maxLength>12</maxLength>
+				<title>Add the 12 digit receiver number</title>
+				<style>
+					<top>50px</top>
+					<left>20px</left>
+				</style>
+			</input>
+			<label>
+				<text>Reason</text>
+				<style>
+					<top>80px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>rec_resAddReceiverReason</id>
+				<title>Add the reason for restricting this receiver number</title>
+				<style>
+					<top>100px</top>
+					<left>20px</left>
+				</style>
+			</input>
+		</page>
+		<page>
+			<pageTitle>Modify Receiver</pageTitle>
+			<label>
+				<text>Receiver</text>
+				<style>
+					<top>30px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<select>
+				<id>rec_resModifyReceiverList</id>
+				<title>The receiver to modify</title>
+				<style>
+					<top>50px</top>
+					<left>20px</left>
+				</style>
+			</select>
+			<label>
+				<text>Receiver</text>
+				<style>
+					<top>80px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>rec_resModifyReceiver</id>
+				<maxLength>12</maxLength>
+				<title>Add the abbreviated department name</title>
+				<style>
+					<top>100px</top>
+					<left>20px</left>
+				</style>
+			</input>
+			<label>
+				<text>Reason</text>
+				<style>
+					<top>130px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>rec_resModifyReceiverReason</id>
+				<title>Add the reason for restricting this receiver number</title>
+				<style>
+					<top>150px</top>
+					<left>20px</left>
+				</style>
+			</input>
+		</page>
+		<page>
+			<pageTitle>Remove Receiver</pageTitle>
+			<label>
+				<text>Receiver</text>
+				<style>
+					<top>30px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<select>
+				<id>rec_resRemoveReceiverList</id>
+				<title>Select the receiver to remove</title>
+				<style>
+					<top>50px</top>
+					<left>20px</left>
+				</style>
+			</select>
+		</page>
+		<page>
+			<style>
+				<fontWeight>bold</fontWeight>
+			</style>
+			<pageTitle>Add Smart card</pageTitle>
+			<label>
+				<text>Smart card</text>
+				<style>
+					<top>30px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>rec_resAddSmartcard</id>
+				<maxLength>12</maxLength>
+				<title>Add the 12 digit smart card number</title>
+				<style>
+					<top>50px</top>
+					<left>20px</left>
+				</style>
+			</input>
+			<label>
+				<text>Reason</text>
+				<style>
+					<top>80px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>rec_resAddSmartcardReason</id>
+				<title>Add the reason for restricting this number</title>
+				<style>
+					<top>100px</top>
+					<left>20px</left>
+				</style>
+			</input>
+		</page>
+		<page>
+			<pageTitle>Modify Smart card</pageTitle>
+			<label>
+				<text>Smart card</text>
+				<style>
+					<top>30px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<select>
+				<id>rec_resModifySmartcardList</id>
+				<title>The smart card to modify</title>
+				<style>
+					<top>50px</top>
+					<left>20px</left>
+				</style>
+			</select>
+			<label>
+				<text>Smart card</text>
+				<style>
+					<top>80px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>rec_resModifySmartcard</id>
+				<maxLength>12</maxLength>
+				<title>Add the smart card to be modified</title>
+				<style>
+					<top>100px</top>
+					<left>20px</left>
+				</style>
+			</input>
+			<label>
+				<text>Reason</text>
+				<style>
+					<top>130px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>rec_resModifySmartcardReason</id>
+				<title>Add the reason for restricting this receiver number</title>
+				<style>
+					<top>150px</top>
+					<left>20px</left>
+				</style>
+			</input>
+
+		</page>
+		<page>
+			<pageTitle>Remove Smartcard</pageTitle>
+			<label>
+				<text>Smart card</text>
+				<style>
+					<top>30px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<select>
+				<id>rec_resRemoveSmartcardList</id>
+				<title>Select the smart card to remove</title>
+				<style>
+					<top>50px</top>
+					<left>20px</left>
+				</style>
+			</select>
+		</page>
+	</screen>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<style>
+			<color>Primary</color>
+		</style>
+		<screenTitle>
+			Document Type Management
+		</screenTitle>
+		<button>
+			<text>Submit</text>
+			<style>
+				<top>225px</top>
+				<left>435px</left>
+			</style>
+			<id>documentTypeSubmit</id>
+		</button>
+		<!-- Add a document type screen -->
+		<page>
+			<style>
+				<fontWeight>bold</fontWeight>
+				<color>Primary</color>
+			</style>
+			<pageTitle>Add Doc Type</pageTitle>
+			<!-- Short Name -->
+			<label>
+				<text>Name</text>
+				<style>
+					<top>10px</top>
+					<left>20px</left>
+					<width>85px</width>
+					<height>20px</height>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>DocumentTypeAddName</id>
+				<maxLength>20</maxLength>
+				<title>Add the document type name</title>
+				<style>
+					<top>30px</top>
+					<left>20px</left>
+					<width>150px</width>
+					<height>20px</height>
+				</style>
+			</input>
+			<label>
+				<text>Description</text>
+				<style>
+					<top>60px</top>
+					<left>20px</left>
+					<width>85px</width>
+					<height>20px</height>
+				</style>
+			</label>
+			<textarea>
+				<id>DocumentTypeAddDescription</id>
+				<title>Add a description for the document type</title>
+				<style>
+					<top>90px</top>
+					<left>20px</left>
+					<width>300px</width>
+					<height>90px</height>
+				</style>
+			</textarea>
+		</page>
+		<!-- Modify a document Type screen -->
+		<page>
+			<pageTitle>Modify Doc Type</pageTitle>
+			<style>
+				<color>Primary</color>
+				<fontWeight>bold</fontWeight>
+			</style>
+			<label>
+				<text>Document Type</text>
+				<style>
+					<top>10px</top>
+					<left>20px</left>
+					<width>120px</width>
+					<height>20px</height>
+				</style>
+			</label>
+			<select>
+				<id>documentTypeModifyList</id>
+				<title>The document type to modify</title>
+				<style>
+					<top>30px</top>
+					<left>20px</left>
+					<width>150px</width>
+					<height>20px</height>
+				</style>
+			</select>
+			<!-- Document Type Name -->
+			<label>
+				<text>Name</text>
+				<style>
+					<top>60px</top>
+					<left>20px</left>
+					<width>75px</width>
+					<height>20px</height>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>DocumentTypeModifyName</id>
+				<maxLength>20</maxLength>
+				<title>Modify the document type name</title>
+				<style>
+					<top>80px</top>
+					<left>20px</left>
+					<width>150px</width>
+					<height>20px</height>
+				</style>
+			</input>
+			<label>
+				<text>Description</text>
+				<style>
+					<top>110px</top>
+					<left>20px</left>
+					<width>85px</width>
+					<height>20px</height>
+				</style>
+			</label>
+			<textarea>
+				<id>DocumentTypeModifyDescription</id>
+				<title>Add a description for the document type</title>
+				<style>
+					<top>130px</top>
+					<left>20px</left>
+					<width>300px</width>
+					<height>50px</height>
+				</style>
+			</textarea>
+		</page>
+		<!-- Remove an organization screen -->
+		<page>
+			<pageTitle>Remove Doc Type</pageTitle>
+			<style>
+				<color>Primary</color>
+				<fontWeight>bold</fontWeight>
+			</style>
+			<!-- Organization select box -->
+			<label>
+				<text>Document Type</text>
+				<style>
+					<top>10px</top>
+					<left>20px</left>
+					<width>150px</width>
+					<height>20px</height>
+				</style>
+			</label>
+			<select>
+				<id>DocumentTypeRemoveList</id>
+				<title>Select the Document Type to remove</title>
+				<style>
+					<top>30px</top>
+					<left>20px</left>
+					<width>150px</width>
+					<height>20px</height>
+				</style>
+			</select>
+		</page>
+	</screen>

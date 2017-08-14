@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			Receivers
+		</screenTitle>
+		<button>
+			<text>Submit</text>
+			<top>225px</top>
+			<left>435px</left>
+			<id>orgSubmit</id>
+		</button>
+		<!-- Add an organization screen -->
+		<page>
+			<pageTitle>Add Receiver</pageTitle>
+			<!-- Short Name -->
+			<label>
+				<text>Short Name</text>
+				<top>60px</top>
+				<left>10px</left>
+				<width>75px</width>
+				<height>20px</height>
+			</label>
+			<input>
+				<type>text</type>
+				<id>OrgAddShortName</id>
+				<maxLength>10</maxLength>
+				<title>Add the abbreviated department name</title>
+				<top>60px</top>
+				<left>110px</left>
+				<width>75px</width>
+				<height>20px</height>
+			</input>
+			<!-- Long Name -->
+			<div>
+				<text>Long Name</text>
+				<top>90px</top>
+				<left>10px</left>
+				<width>75px</width>
+				<height>20px</height>
+			</div>
+			<input>
+				<type>text</type>
+				<id>OrgAddLongName</id>
+				<maxLength>32</maxLength>
+				<title>Add the complete department name</title>
+				<top>90px</top>
+				<left>110px</left>
+				<width>115px</width>
+				<height>20px</height>
+			</input>
+			<!-- Parent select box -->
+			<label>
+				<text>Parent</text>
+				<left>10px</left>
+				<top>120px</top>
+				<width>150px</width>
+				<height>20px</height>
+			</label>
+			<select>
+				<id>OrgAddParentList</id>
+				<title>Add the parent organization</title>
+				<top>120px</top>
+				<left>110px</left>
+				<width>120px</width>
+				<height>20px</height>
+			</select>
+		</page>
+		<!-- Modify an organization screen -->
+		<page>
+			<pageTitle>Modify Organization</pageTitle>
+			<label>
+				<text>Organization</text>
+				<top>30px</top>
+				<left>10px</left>
+				<width>75px</width>
+				<height>20px</height>
+			</label>
+			<select>
+				<id>OrgModifyList</id>
+				<title>The organization to modify</title>
+				<top>30px</top>
+				<left>110px</left>
+				<width>110px</width>
+				<height>20px</height>
+			</select>
+
+			<!-- Short Name -->
+			<label>
+				<text>Short Name</text>
+				<top>60px</top>
+				<left>10px</left>
+				<width>75px</width>
+				<height>20px</height>
+			</label>
+			<input>
+				<type>text</type>
+				<id>OrgModifyShortName</id>
+				<maxLength>10</maxLength>
+				<title>Add the abbreviated department name</title>
+				<top>60px</top>
+				<left>110px</left>
+				<width>75px</width>
+				<height>20px</height>
+			</input>
+			<!-- Long Name -->
+			<div>
+				<text>Long Name</text>
+				<top>90px</top>
+				<left>10px</left>
+				<width>75px</width>
+				<height>20px</height>
+			</div>
+			<input>
+				<type>text</type>
+				<id>OrgModifyLongName</id>
+				<maxLength>32</maxLength>
+				<title>Modify the complete department name</title>
+				<top>90px</top>
+				<left>110px</left>
+				<width>115px</width>
+				<height>20px</height>
+			</input>
+			<!-- Parent select box -->
+			<label>
+				<text>Parent</text>
+				<left>10px</left>
+				<top>120px</top>
+				<width>150px</width>
+				<height>20px</height>
+			</label>
+			<select>
+				<id>OrgModifyParentList</id>
+				<title>Add the parent organization</title>
+				<top>120px</top>
+				<left>110px</left>
+				<width>120px</width>
+				<height>20px</height>
+			</select>
+		</page>
+		<!-- Remove an organization screen -->
+		<page>
+			<pageTitle>Remove Organization</pageTitle>
+			<!-- Organization select box -->
+			<label>
+				<text>Organization</text>
+				<left>10px</left>
+				<top>40px</top>
+				<width>150px</width>
+				<height>20px</height>
+			</label>
+			<select>
+				<id>OrgRemoveList</id>
+				<title>Select the organization to remove</title>
+				<top>40px</top>
+				<left>110px</left>
+				<width>110px</width>
+				<height>20px</height>
+			</select>
+		</page>
+	</screen>

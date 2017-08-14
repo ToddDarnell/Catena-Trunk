@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			Document Change Request 
+		</screenTitle>
+		<!-- Build the box for the background of fields -->
+		<box>
+			<style>
+				<position>absolute</position>
+				<backgroundColor>Secondary</backgroundColor>
+				<left>0px</left>
+				<top>0px</top>
+				<width>660px</width>
+				<height>75px</height>
+				<color>Primary</color>
+				<fontWeight>bold</fontWeight>
+				<zIndex>1</zIndex>
+			</style>
+			<!-- Document Title -->
+	      <label>
+	          <text>Title</text>
+	          <style>
+	              <top>10px</top>
+	              <left>25px</left>
+	              <width>210px</width>
+	              <zIndex>2</zIndex>
+	          </style>
+	        </label>
+	        <div>
+	            <id>docChangeReqTitle</id>
+	            <title>The document title.</title>
+	            <style>
+	                <top>30px</top>
+	                <left>25px</left>
+	                <width>250px</width>
+	                <overflow>hidden</overflow>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </div>
+	        <!-- Document Type -->
+	      	<label>
+	          <text>Type</text>
+	          <style>
+	              <top>10px</top>
+	              <left>305px</left>
+	              <width>100px</width>
+	              <zIndex>2</zIndex>
+	          </style>
+	        </label>
+	        <div>
+	        	<id>docChangeReqType</id>
+	            <maxLength>75</maxLength>
+	            <title>The document type.</title>
+	            <style>
+	                <top>30px</top>
+	                <left>305px</left>
+	                <width>140px</width>
+	                <height>20px</height>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </div>
+			<!-- Document Versions selection list -->
+	      	<label>
+	          <text>Version</text>
+	          <style>
+	              <top>10px</top>
+	              <left>475px</left>
+	              <zIndex>2</zIndex>
+	          </style>
+	        </label>
+	        <select>
+	            <id>docChangeReqVerList</id>
+	            <title>List of the document versions the request is for.</title>
+	            <style>
+	                <top>30px</top>
+	                <left>475px</left>
+	                <width>75px</width>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </select>
+		</box>
+		<box>
+			<id>docChangeReqBox</id>
+			<style>
+				<position>absolute</position>
+				<backgroundColor>Secondary</backgroundColor>
+				<left>0px</left>
+				<top>125px</top>
+				<width>660px</width>
+				<height>380px</height>
+				<color>Primary</color>
+				<fontWeight>bold</fontWeight>
+				<zIndex>1</zIndex>
+			</style>	        
+			<!-- Document Page Number of Request -->
+	      	<label>
+	          <text>Page #</text>
+              <title>The page number of the document change request.</title>
+	          <style>
+	              <top>10px</top>
+	              <left>25px</left>
+	              <zIndex>2</zIndex>
+	          </style>
+	        </label>
+	        <input>
+	        	<type>text</type>
+	            <id>docChangeReqPageNum</id>
+	            <maxLength>3</maxLength>
+	            <title>The page number of the document change request.</title>
+	            <style>
+	                <top>30px</top>
+	                <left>25px</left>
+	                <width>75px</width>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </input>	
+			<!-- Document Step Number of Request -->
+	      	<label>
+	          <text>Step #</text>
+	          <title>The step number of the document change request.</title>
+	          <style>
+	              <top>10px</top>
+	              <left>335px</left>
+	              <zIndex>2</zIndex>
+	          </style>
+	        </label>
+	        <input>
+	        	<type>text</type>
+	            <id>docChangeReqStepNum</id>
+				<maxLength>10</maxLength>
+	            <title>The step number of the document change request.</title>
+	            <style>
+	                <top>30px</top>
+	                <left>335px</left>
+	                <width>75px</width>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </input>	
+	      	<!-- Deadline Date>  
+			<label>
+				<text>Desired Completion Date</text>
+	            <title>The desired completion date for the change request.</title>
+				<style>
+				<top>10px</top>
+				<left>305px</left>
+				</style>
+			</label>
+			<calendar>
+				<id>docChangeRequestCalendar</id>
+				<tabIndex>5</tabIndex>
+				<top>30px</top>
+				<left>303px</left>                
+				<required>false</required>          
+			</calendar-->
+	      	<!-- The current step in the document the request is for -->
+	        <label>
+	          <text>Current Step</text>
+              <title>The description of the current step within the document.</title>
+	          <style>	
+	          	 <top>80px</top>
+	             <left>25px</left>
+							 <width>100px</width>
+							 <height>18px</height>
+							 <zIndex>2</zIndex>
+	          </style>
+	        </label>
+	        <textarea>
+	            <id>docChangeReqCurrent</id>
+	            <title>The description of the current step within the document.</title>
+	            <style>
+	                <top>100px</top>
+	                <left>25px</left>
+	                <width>300px</width>
+   		            <height>250px</height>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </textarea>
+	        <!-- The description of the update for the request -->
+	        <label>
+	            <text>Requested Update</text>
+		        <title>The description of the requested update of the current step.</title>
+	            <style>
+	                <top>80px</top>
+	                <left>335px</left>
+									<width>150px</width>
+									<height>18px</height>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </label>
+	        <textarea>
+		        <id>docChangeReqUpdate</id>
+		        <title>The description of the requested update of the current step.</title>
+		        <style>
+		            <top>100px</top>
+		            <left>335px</left>
+		            <width>300px</width>
+		            <height>250px</height>
+		            <zIndex>2</zIndex>
+		        </style>
+		  	</textarea>
+	        <!-- Add button for adding an item to the list -->
+			<button>
+				<text>Add</text>
+				<id>docChangeReqAddButton</id>
+		        <title>Add an additional item.</title>
+				<style>
+					<top>360px</top>
+					<left>585px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</button>
+	        <!-- Clear button to clear the fields -->
+			<button>
+				<text>Clear</text>
+				<id>docChangeReqClearButton</id>
+		        <title>Clear the item.</title>
+				<style>
+					<top>360px</top>
+					<left>20px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</button>
+		</box>
+		<box>
+			<style>
+				<position>absolute</position>
+				<backgroundColor>Secondary</backgroundColor>
+				<left>0px</left>
+				<top>550px</top>
+				<width>660px</width>
+				<height>20px</height>
+				<color>Primary</color>
+				<fontWeight>bold</fontWeight>
+				<zIndex>1</zIndex>
+			</style>
+				<!-- Returns user to referring page -->
+				<button>
+					<text>Back</text>
+			        <title>Return to the search document screen.</title>
+					<id>docChangeReqBackButton</id>
+					<style>
+						<top>0px</top>
+						<left>20px</left>
+						<zIndex>2</zIndex>
+					</style>
+				</button>			
+				<!-- Submits request to the Administrator -->
+				<button>
+					<text>Submit Request</text>
+					<id>docChangeReqSubmitButton</id>
+			        <title>Submit the document change request.</title>
+					<style>
+						<top>0px</top>
+						<left>510px</left>
+						<width>120px</width>
+						<zIndex>2</zIndex>
+					</style>
+				</button>
+	    </box>
+		<table>
+			<id>document_ChangeRequestTable</id>
+			<style>
+				<left>0px</left>
+				<top>490px</top>
+				<width>600px</width>
+			</style>
+		</table>	   	
+		<form>
+			<encoding>multipart/form-data</encoding>
+			<method>post</method>
+			<id>docChangeRequestForm</id>
+			<target>fileLoader</target>
+			<style>
+				<display>none</display>
+			</style>
+		</form>
+	</screen>

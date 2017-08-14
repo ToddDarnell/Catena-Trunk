@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			Transfer Receiver
+		</screenTitle>
+		<!-- Build the box for the background of fields -->
+		<box>
+			<id>docTransferBox</id>
+			<style>
+				<position>absolute</position>
+				<backgroundColor>Secondary</backgroundColor>
+				<left>0px</left>
+				<top>0px</top>
+				<width>600px</width>
+				<height>300px</height>
+				<color>Primary</color>
+				<fontWeight>bold</fontWeight>
+				<zIndex>1</zIndex>
+			</style>
+			<!-- Uploads Document and sends Document info to server -->
+			<button>
+				<id>transferReceiverButton</id>
+				<text>Transfer</text>
+				<style>
+					<top>300px</top>
+					<left>400px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</button>
+			<button>
+				<id>transferReceiverBackButton</id>
+				<text>Back</text>
+				<style>
+					<top>300px</top>
+					<left>150px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</button>
+			<!-- The drop down and label for the organization which this receiver is
+				being transfered to.-->
+			<label>
+				<text>Transfer Organization</text>
+				<style>
+					<top>160px</top>
+					<left>350px</left>
+					<width>150px</width>
+					<height>20px</height>
+					<zIndex>2</zIndex>
+				</style>
+			</label>
+			<select>
+				<id>transferRecToList</id>
+				<title>The organization to send the receiver to</title>
+				<style>
+					<top>180px</top>
+					<left>340px</left>
+					<width>140px</width>
+					<height>20px</height>
+					<zIndex>1</zIndex>
+				</style>
+			</select>
+			<!-- Receiver data input boxes -->
+			<label>
+				<text>Receiver</text>
+				<style>
+				<top>10px</top>
+				<left>20px</left>
+				<width>75px</width>
+				<height>20px</height>
+				<zIndex>2</zIndex>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>RecTransferReceiver</id>
+				<maxLength>12</maxLength>
+				<disabled>true</disabled>
+				<style>
+					<top>10px</top>
+					<left>100px</left>
+					<width>100px</width>
+					<height>18px</height>
+					<zIndex>2</zIndex>
+				</style>
+			</input>
+			<!-- Smart card input boxes -->
+			<label>
+				<text>Smart Card</text>
+				<style>
+					<top>40px</top>
+					<left>20px</left>
+					<width>100px</width>
+					<height>18px</height>
+					<zIndex>2</zIndex>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>RecTransferSmartcard</id>
+				<maxLength>12</maxLength>
+				<disabled>true</disabled>
+				<style>
+					<top>40px</top>
+					<left>100px</left>
+					<width>100px</width>
+					<height>18px</height>
+					<zIndex>2</zIndex>
+				</style>
+			</input>
+			<!-- Hardware data -->
+			<label>
+				<text>Hardware</text>
+				<style>
+					<top>70px</top>
+					<left>20px</left>
+					<width>75px</width>
+					<height>18px</height>
+					<zIndex>2</zIndex>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>RecTransferHardware</id>
+				<maxLength>4</maxLength>
+				<title>The 4 digit hardware id</title>
+				<disabled>true</disabled>
+				<style>
+					<top>70px</top>
+					<left>100px</left>
+					<width>40px</width>
+					<height>18px</height>
+					<zIndex>2</zIndex>
+				</style>
+			</input>
+			<!-- Receiver status -->
+			<label>
+				<text>Status</text>
+				<style>
+				<top>100px</top>
+				<left>20px</left>
+				<width>75px</width>
+				<height>18px</height>
+				<zIndex>2</zIndex>
+				</style>
+			</label>
+			<input>
+				<id>RecTransferStatusList</id>
+				<title>The receiver status</title>
+				<disabled>true</disabled>
+				<style>
+					<top>100px</top>
+					<left>100px</left>
+					<width>115px</width>
+					<height>20px</height>
+					<zIndex>2</zIndex>
+				</style>
+			</input>
+		<!-- Model data
+			All of this is read only
+		 -->
+			<label>
+				<text>Model</text>
+				<style>
+				<top>10px</top>
+				<left>275px</left>
+				<width>75px</width>
+				<height>18px</height>
+				<zIndex>2</zIndex>
+				</style>
+			</label>
+			<input>
+				<disabled>true</disabled>
+				<type>text</type>
+				<id>ReceiverTransferModel</id>
+				<title>Receiver model. This field is filled in by inputting the hardware id</title>
+				<style>
+					<top>10px</top>
+					<left>375px</left>
+					<width>100px</width>
+					<height>18px</height>
+					<zIndex>2</zIndex>
+				</style>
+			</input>
+			<!-- Organization data -->
+			<label>
+				<text>Organization</text>
+				<style>
+				<top>40px</top>
+				<left>275px</left>
+				<width>75px</width>
+				<height>18px</height>
+				<zIndex>2</zIndex>
+				</style>
+			</label>
+			<input>
+				<disabled>true</disabled>
+				<type>text</type>
+				<id>RecTransferOrganization</id>
+				<title>The owner organization. Assigned based upon your organization</title>
+				<style>
+					<top>40px</top>
+					<left>375px</left>
+					<width>100px</width>
+					<height>18px</height>
+				</style>
+			</input>
+		</box>
+	</screen>

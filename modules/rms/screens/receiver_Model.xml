@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>Model Administration</screenTitle>
+		<button>
+			<text>Submit</text>
+			<style>
+				<top>225px</top>
+				<left>435px</left>
+			</style>
+			<id>receiverModel_Submit</id>
+		</button>
+		<page>
+			<pageTitle>Add</pageTitle>
+			<style>
+				<fontWeight>bold</fontWeight>
+			</style>
+			<label>
+				<text>Name</text>
+				<style>
+					<top>30px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>receiverModel_AddName</id>
+				<size>16</size>
+				<maxLength>16</maxLength>
+				<title>Add the model name</title>
+				<style>
+					<top>50px</top>
+					<left>20px</left>
+				</style>
+			</input>
+			<label>
+				<text>Description</text>
+				<maxLength>60</maxLength>
+				<style>
+					<top>80px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>receiverModel_AddDescription</id>
+				<title>Add a description for this model</title>
+				<style>
+					<top>100px</top>
+					<left>20px</left>
+				</style>
+			</input>
+		</page>
+
+		<!-- Modify -->
+		<page>
+			<pageTitle>Modify</pageTitle>
+
+			<label>
+				<text>Model</text>
+				<style>
+					<top>30px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<select>
+				<id>receiverModel_ModifyList</id>
+				<title>The receiver model to modify</title>
+				<style>
+					<top>50px</top>
+					<left>20px</left>
+				</style>
+			</select>
+
+			<label>
+				<text>Name</text>
+				<style>
+					<top>80px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>receiverModel_ModifyName</id>
+				<size>16</size>
+				<maxLength>16</maxLength>
+				<title>Add the model name</title>
+				<style>
+					<top>100px</top>
+					<left>20px</left>
+				</style>
+			</input>
+			<label>
+				<text>Description</text>
+				<maxLength>60</maxLength>
+				<style>
+					<top>130px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>receiverModel_ModifyDescription</id>
+				<title>Add a description for this model</title>
+				<style>
+					<top>150px</top>
+					<left>20px</left>
+				</style>
+			</input>
+		</page>
+		<page>
+			<pageTitle>Remove</pageTitle>
+			
+			<label>
+				<text>Model</text>
+				<style>
+					<top>30px</top>
+					<left>20px</left>
+				</style>
+			</label>
+			<select>
+				<id>receiverModel_RemoveList</id>
+				<title>The model to remove</title>
+				<style>
+					<top>50px</top>
+					<left>20px</left>
+				</style>
+			</select>
+		</page>
+	</screen>
