@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<menu>
+		<SubMenu>
+			<title>Authorizations</title>
+			<site>prod</site>
+			<tip>Receiver CSG request authorizations</tip>
+			<menuItem>
+				<title>CSG Request</title>
+				<site>prod</site>
+				<tip>Request receiver authorizations</tip>
+				<right>CSG_Standard</right>
+			</menuItem>
+			
+			<menuItem>
+				<title>CSG History</title>
+				<site>prod</site>
+				<tip>Review your submitted CSG Requests</tip>
+				<right>CSG_Standard</right>
+			</menuItem>
+				
+			<menuItem>
+				<title>CSG Queue</title>
+				<site>prod</site>
+				<right>CSG_Admin</right>
+				<tip>View pending CSG requests</tip>
+			</menuItem>
+			<menuItem>
+				<title>CSG Search</title>
+				<site>prod</site>
+				<tip>Search for CSG transactions</tip>
+				<right>CSG_Standard</right>
+				<right>CSG_Admin</right>
+			</menuItem>
+		</SubMenu>
+	</menu>

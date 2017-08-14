@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			CSG Accounts
+		</screenTitle>
+		<button>
+			<text>Submit</text>
+			<style>
+				<top>225px</top>
+				<left>435px</left>
+			</style>
+			<id>csgaccount_Submit</id>
+		</button>
+		<page>
+			<style>
+				<fontWeight>bold</fontWeight>
+			</style>
+			<pageTitle>Add Account</pageTitle>
+			<label>
+				<text>Name</text>
+				<style>
+					<top>20px</top>
+					<left>10px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>csgaccount_AddName</id>
+				<maxLength>20</maxLength>
+				<title>A short name for the account</title>
+				<style>
+					<top>20px</top>
+					<left>110px</left>
+				</style>
+			</input>
+			<label>
+				<text>Number</text>
+				<style>
+					<top>60px</top>
+					<left>10px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<maxLength>16</maxLength>
+				<id>csgaccount_AddNumber</id>
+				<title>The sixteen digit identifier</title>
+				<style>
+					<top>60px</top>
+					<left>110px</left>
+				</style>
+			</input>
+			<!-- Parent select box -->
+			<label>
+				<text>Owner</text>
+				<style>
+					<left>10px</left>
+					<top>90px</top>
+				</style>
+			</label>
+			<select>
+				<id>csgaccount_AddOwner</id>
+				<title>Add the owning organization</title>
+				<style>
+					<top>90px</top>
+					<left>110px</left>
+				</style>
+			</select>
+		</page>
+		<!-- Modify an organization screen -->
+		<page>
+			<pageTitle>Modify Account</pageTitle>
+			<label>
+				<text>Group</text>
+				<style>
+					<top>30px</top>
+					<left>10px</left>
+				</style>
+			</label>
+			<select>
+				<id>csgaccount_ModifyList</id>
+				<title>The organization to modify</title>
+				<style>
+					<top>30px</top>
+					<left>110px</left>
+				</style>
+			</select>
+
+			<!-- Short Name -->
+			<label>
+				<text>Name</text>
+				<style>
+					<top>60px</top>
+					<left>10px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>csgaccount_ModifyName</id>
+				<maxLength>11</maxLength>
+				<title>Add the abbreviated department name</title>
+				<style>
+					<top>60px</top>
+					<left>110px</left>
+				</style>
+			</input>
+			<label>
+				<text>Description</text>
+				<style>
+					<top>90px</top>
+					<left>10px</left>
+				</style>
+			</label>
+			<textArea>
+				<id>csgaccount_ModifyDescription</id>
+				<title>Modify the complete department name</title>
+				<style>
+					<top>90px</top>
+					<left>110px</left>
+				</style>
+			</textArea>
+			<label>
+				<text>Parent</text>
+				<style>
+					<left>10px</left>
+					<top>150px</top>
+				</style>
+			</label>
+			<select>
+				<id>csgaccount_ModifyOwner</id>
+				<title>Add the parent organization</title>
+				<style>
+					<top>150px</top>
+					<left>110px</left>
+				</style>
+			</select>
+		</page>
+		<!-- Remove an organization screen -->
+		<page>
+			<pageTitle>Disable Account</pageTitle>
+			<!-- Organization select box -->
+			<label>
+				<text>Organization</text>
+				<style>
+					<left>10px</left>
+					<top>40px</top>
+				</style>
+			</label>
+			<select>
+				<id>csgaccount_RemoveList</id>
+				<title>Select the organization to remove</title>
+				<style>
+					<top>40px</top>
+					<left>110px</left>
+				</style>
+			</select>
+		</page>
+	</screen>

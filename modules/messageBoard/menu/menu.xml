@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<menu>
+		<SubMenu>
+			<title>Message Board</title>
+			<site>prod</site>
+			<tip>Post and view messages</tip>
+			<menuItem>
+				<title>Message Main</title>
+				<site>prod</site>
+				<right>MSG_BOARD_Standard</right>
+				<tip>Your message board inbox</tip>
+			</menuItem>
+			<menuItem>
+				<title>Create Message</title>
+				<site>prod</site>
+				<right>MSG_BOARD_Standard</right>
+				<tip>Post new messages</tip>
+			</menuItem>
+			<menuItem>
+				<title>My Messages</title>
+				<site>prod</site>
+				<right>MSG_BOARD_Standard</right>
+				<tip>View, modify, and remove messages you've created</tip>
+			</menuItem>
+			<menuItem>
+				<title>Search Messages</title>
+				<right>MSG_BOARD_Standard</right>
+				<site>prod</site>
+				<tip>Search, view, modify and remove messages</tip>
+			</menuItem>
+			<menuItem>
+				<title>Audit Messages</title>
+				<site>prod</site>
+				<right>MSG_BOARD_Admin</right>
+				<tip>Track message readership</tip>
+			</menuItem>
+		</SubMenu>
+	</menu>
+	
+	
+	

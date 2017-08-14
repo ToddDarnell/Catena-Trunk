@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			Audit Messages
+		</screenTitle>
+		<!-- Build the box for the background of fields -->
+		<box>
+			<id>MessageAuditBox</id>
+			<style>
+				<position>absolute</position>
+				<backgroundColor>Secondary</backgroundColor>
+				<left>0px</left>
+				<top>0px</top>
+				<width>600px</width>
+				<height>215px</height>
+				<color>Primary</color>
+				<zIndex>1</zIndex>
+				<fontWeight>bold</fontWeight>
+			</style>
+			<!-- User to be audited -->
+			<label>
+				<text>User</text>
+				<style>
+					<top>10px</top>
+					<left>25px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<style>
+					<display>none</display>
+				</style>
+				<id>msgAudit_User</id>
+                <search>employee</search>
+			</input>
+			<label>
+			<id>messageAudit_SelectedUser</id>
+			<style>
+				<top>30px</top>
+				<left>260px</left>
+				<zIndex>2</zIndex>
+			</style>
+		  	</label>
+			<!-- Message Subject -->
+			<label>
+				<text>Subject</text>
+				<style>
+					<top>60px</top>
+					<left>25px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>msgAuditSubject</id>
+				<search>subject</search>
+				<maxLength>75</maxLength>
+				<title>Search fields individually or by using any combination of fields.</title>
+				<style>
+					<top>80px</top>
+					<left>25px</left>
+					<width>305px</width>
+					<zIndex>2</zIndex>
+				</style>
+			</input>
+			<label>
+				<text>From Date</text>
+				<style>
+					<top>110px</top>
+					<left>25px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</label>
+			<calendar>
+	          <id>msgAudit_CalendarFrom</id>
+	          <title>The Submission Date of the message</title><!--Not working?-->
+	          <top>130px</top>
+	          <left>25px</left>             
+	          <required>false</required>          
+	      	</calendar>
+	      	<input>
+	      		<id>msgAudit_HiddenFrom</id>
+	      		<style>
+	      			<top>245px</top>
+	          		<left>340px</left>
+	      			<display>none</display>
+	      		</style>
+	      		<search>fromDate</search>
+	      	</input>        	
+			<!-- Message Date To -->			
+			<label>
+				<text>To Date</text>
+				<style>
+					<top>160px</top>
+					<left>25px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</label>
+			<calendar>
+	          <id>msgAudit_CalendarTo</id>
+	          <title>The Submission Date of the message</title><!--Not working?-->
+	          <top>180px</top>
+	          <left>25px</left>              
+	          <required>false</required>          
+	      	</calendar>
+	      	<input>
+	      		<id>msgAudit_HiddenTo</id>
+	      		<style>
+	      			<top>250px</top>
+	      			<left>340px</left>
+	      			<display>none</display>
+	      		</style>
+	      		<search>toDate</search>
+	      	</input>  
+	      	<!-- Search button -->    		
+			<button>
+				<text>Search</text>
+				<style>
+					<top>185px</top>
+					<left>500px</left>
+					<zIndex>2</zIndex>
+				</style>
+				<id>submit_message_Audit</id>
+			</button>
+			<!-- Clear Button -->
+			<button>
+				<text>New</text>
+				<style>
+					<top>10px</top>
+					<left>500px</left>
+					<zIndex>2</zIndex>
+				</style>
+				<id>clear_message_Audit</id>
+			</button>
+		</box>
+		<!-- Search results displayed after selecting Search Button
+			 Initially hidden table until Search Button selected-->
+		<label>
+			<id>message_message_Audit</id>
+			<style>
+				<position>absolute</position>
+				<left>0px</left>
+				<top>270px</top>
+				<width>600px</width>
+				<zIndex>0</zIndex>
+				<visibility>hidden</visibility>
+			</style>
+		</label>
+		<table>
+			<id>results_message_Audit</id>
+			<style>
+				<left>0px</left>
+				<top>280px</top>
+				<width>600px</width>
+			</style>
+		</table>		
+	</screen>

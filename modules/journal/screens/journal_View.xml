@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			View Journal Entry
+		</screenTitle>
+		<!-- Build the box for the background of fields -->
+		<box>
+			<id>JournalViewBox</id>
+			<style>
+				<position>absolute</position>
+				<backgroundColor>Secondary</backgroundColor>
+				<left>0px</left>
+				<top>0px</top>
+				<width>600px</width>
+				<height>300px</height>
+				<color>Primary</color>
+				<fontWeight>bold</fontWeight>
+				<zIndex>1</zIndex>
+			</style>
+			<!-- Returns user to referring page -->
+			<button>
+				<text>Back</text>
+				<id>JournalViewBackButton</id>
+				<style>
+					<top>320px</top>
+					<left>400px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</button>		
+			<!-- Journal Entry Poster -->
+	      	<label>
+	          	<text>Event Creator</text>
+	          	<style>
+	              	<top>10px</top>
+	              	<left>25px</left>
+	              	<width>210px</width>
+	              	<zIndex>2</zIndex>
+	          	</style>
+	        </label>
+	        <div>
+	            <id>JournalViewPoster</id>
+	            <title>The person who posted this journal entry</title>
+	            <style>
+	                <top>30px</top>
+	                <left>25px</left>
+	                <width>200px</width>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </div>
+	        <!-- Journal Post Date -->
+	      	<label>
+	          	<text>Event Date</text>
+	          	<style>
+		              <top>10px</top>
+		              <left>250px</left>
+		              <width>200px</width>
+		              <zIndex>2</zIndex>
+	          	</style>
+	        </label>
+	        <div>
+	            <id>JournalViewPostDate</id>
+	            <maxLength>75</maxLength>
+	            <title>The date the journal entry was posted</title>
+	            <style>
+	                <top>30px</top>
+	                <left>250px</left>
+	                <width>100px</width>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </div>
+			<!-- Journal Category -->
+	      	<label>
+		        <text>Category</text>
+		        <style>
+		              <top>10px</top>
+		              <left>375px</left>
+		              <zIndex>2</zIndex>
+	          	</style>
+	        </label>
+	        <div>
+	            <id>JournalViewCategory</id>
+	            <title>The categoy that has been assigned to the journal entry</title>
+	            <style>
+	                <top>30px</top>
+	                <left>375px</left>
+	                <width>100px</width>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </div>
+	      	<!-- Journal Subject Employee Name -->
+	      	<label>
+	          	<text>Employee Name</text>
+	          	<style>
+	              	<top>70px</top>
+	              	<left>25px</left>
+	              	<zIndex>2</zIndex>
+	          	</style>
+	        </label>
+	        <div>
+	            <id>JournalViewSubject</id>
+	            <maxLength>75</maxLength>
+	            <title>The person the journal entry is about</title>
+	            <style>
+			        <overflow>hidden</overflow>
+	                <top>90px</top>
+	                <left>25px</left>
+	                <width>200px</width><!-- Old was 540px. -->
+	                <zIndex>2</zIndex>
+	            </style>
+	        </div>
+	        <!-- Journal Body -->
+	        <label>
+	            <text>Event Description</text>
+	            <style>
+	                <top>120px</top>
+	                <left>25px</left>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </label>
+	        <div>
+		        <id>JournalViewBody</id>
+		        <title>The journal entry</title>
+		        <style>
+	                <overflow>auto</overflow>
+		            <top>140px</top>
+		            <left>25px</left>
+		            <width>540px</width>
+		            <height>140px</height>
+		            <zIndex>2</zIndex>
+		        </style>
+			</div>  
+	    </box>
+	</screen>

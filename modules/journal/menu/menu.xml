@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<menu>
+		<SubMenu>
+			<title>Journal</title>
+			<site>prod</site>
+			<tip>Post a private message about yourself or your coworkers</tip>
+
+			<menuItem>
+				<title>Journal Entry</title>
+				<site>prod</site>
+				<tip>Post a journal entry</tip>
+				<right>JOURNAL_Standard</right>
+			</menuItem>
+			
+			<menuItem>
+				<title>Journal Admin</title>
+				<site>prod</site>
+				<tip>View journal entries</tip>
+				<right>JOURNAL_Admin</right>
+			</menuItem>
+		</SubMenu>
+	</menu>

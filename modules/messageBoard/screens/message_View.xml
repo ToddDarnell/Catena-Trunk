@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			View Message 
+		</screenTitle>
+		<!-- Build the box for the background of fields -->
+		<box>
+			<id>msgViewBox</id>
+			<style>
+				<position>absolute</position>
+				<backgroundColor>Secondary</backgroundColor>
+				<left>0px</left>
+				<top>0px</top>
+				<width>600px</width>
+				<height>300px</height>
+				<color>Primary</color>
+				<fontWeight>bold</fontWeight>
+				<zIndex>1</zIndex>
+			</style>
+			<!-- Returns user to referring page -->
+			<button>
+				<text>Back</text>
+				<id>backMsgViewButton</id>
+				<style>
+					<top>320px</top>
+					<left>400px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</button>		
+			<!-- Message Poster -->
+		    <label>
+		        <text>Posted By</text>
+		        <style>
+		            <top>10px</top>
+		            <left>25px</left>
+		            <width>210px</width>
+		            <zIndex>2</zIndex>
+		        </style>
+		    </label>
+	        <div>
+	            <id>MsgViewPoster</id>
+	            <title>The message poster</title>
+	            <style>
+	                <top>30px</top>
+	                <left>25px</left>
+	                <width>200px</width>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </div>
+	        <!-- Message Post Date -->
+	      	<label>
+	        	  <text>Post Date</text>
+	          	  <style>
+		              <top>10px</top>
+		              <left>250px</left>
+		              <width>200px</width>
+		              <zIndex>2</zIndex>
+	          	  </style>
+	        </label>
+	        <div>
+	            <id>MsgViewPostDate</id>
+	            <maxLength>75</maxLength>
+	            <title>The date the message was posted</title>
+	            <style>
+	                <top>30px</top>
+	                <left>250px</left>
+	                <width>100px</width>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </div>
+			<!-- Message Organization -->
+	      	<label>
+		          <text>Organization</text>
+		          <style>
+		              <top>10px</top>
+		              <left>375px</left>
+		              <zIndex>2</zIndex>
+		          </style>
+	        </label>
+	        <div>
+	            <id>MsgViewOrganization</id>
+	            <title>The organization the message is directed toward</title>
+	            <style>
+	                <top>30px</top>
+	                <left>375px</left>
+	                <width>100px</width>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </div>
+	        <!-- Message Priority -->
+	      	<label>
+	          <text>Priority</text>
+	          <style>
+	              <top>10px</top>
+	              <left>500px</left>
+	              <zIndex>2</zIndex>
+	          </style>
+	        </label>
+	        <div>
+	            <id>MsgViewPriority</id>
+	            <title>The priority of the message</title>
+	            <style>
+	                <top>30px</top>
+	                <left>500px</left>
+	                <width>65px</width>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </div>	
+	      	<!-- Message Subject -->
+	      	<label>
+		          <text>Subject</text>
+		          <style>
+		              <top>70px</top>
+		              <left>25px</left>
+		              <zIndex>2</zIndex>
+		          </style>
+	        </label>
+	        <div>
+	            <id>MsgViewSubject</id>
+	            <maxLength>75</maxLength>
+	            <title>The message subject</title>
+	            <style>
+			        <overflow>hidden</overflow>
+	                <top>90px</top>
+	                <left>25px</left>
+	                <width>540px</width>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </div>
+	        <!-- Message Body -->
+	        <label>
+	            <text>Message</text>
+	            <style>
+	                <top>120px</top>
+	                <left>25px</left>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </label>
+	        <div>
+		        <id>MsgViewBody</id>
+		        <title>The Message body</title>
+		        <style>
+	                <overflow>auto</overflow>
+		            <top>140px</top>
+		            <left>25px</left>
+		            <width>540px</width>
+		            <height>140px</height>
+		            <zIndex>2</zIndex>
+		        </style>
+			</div>  
+	    </box>
+	</screen>

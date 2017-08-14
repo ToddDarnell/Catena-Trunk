@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			Preferences
+		</screenTitle>
+		<!-- Build the box for the background of fields -->
+		<box>
+			<style>
+				<position>absolute</position>
+				<backgroundColor>Secondary</backgroundColor>
+				<left>0px</left>
+				<top>0px</top>
+				<width>600px</width>
+				<height>160px</height>
+				<color>Primary</color>
+				<fontWeight>bold</fontWeight>
+				<zIndex>1</zIndex>
+			</style>
+			<label>
+				<text>Color Theme</text>
+				<style>
+					<top>20px</top>
+					<left>20px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</label>
+			<select>
+				<id>preferences_ThemeList</id>
+				<title>Use theme preferences</title>
+				<style>
+					<top>40px</top>
+					<left>20px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</select>
+			<input>
+				<style>
+					<top>40px</top>
+					<left>220px</left>
+				</style>
+				<type>CHECKBOX</type>
+				<id>preferences_EnableEmail</id>
+				<title>Check to enable modifying user email address</title>
+			</input>
+			<label>
+				<text>E-mail</text>
+				<style>
+					<top>20px</top>
+					<left>240px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</label>
+			<input>
+				<id>preferences_EMail</id>
+				<title>User email address</title>
+				<disabled>true</disabled>
+				<size>30</size>
+				<style>
+					<top>40px</top>
+					<left>240px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</input>
+			<label>
+				<text>Flair</text>
+				<title>Falling images appear at the top of the screen and provide a gentle ambiance</title> 
+				<style>
+					<top>100px</top>
+					<left>20px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</label>
+			<select>
+				<id>preferences_EnableFlakes</id>
+				<title>Determines how often the falling images appear</title>
+				<style>
+					<top>120px</top>
+					<left>20px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</select>
+			<label>
+				<text>Notification Display</text>
+				<title>Determines how long notification messages should display on the screen.</title> 
+				<style>
+					<top>100px</top>
+					<left>240px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</label>
+			<select>
+				<id>preferences_NotificationSpeed</id>
+				<title>Determines how long user messages stay on screen</title>
+				<style>
+					<top>120px</top>
+					<left>240px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</select>
+			<label>
+				<text>Close Site Notice</text>
+				<title>Enable to display a close message when leaving the site.</title> 
+				<style>
+					<top>100px</top>
+					<left>440px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</label>
+			<select>
+				<id>preferences_CloseNotice</id>
+				<title>Enable to display a close message when leaving the site.</title> 
+				<style>
+					<top>120px</top>
+					<left>440px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</select>
+			<button>
+				<id>preferences_Submit</id>
+				<text>Submit</text>
+				<style>
+					<top>180px</top>
+					<left>400px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</button>
+		</box>
+	</screen>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<menu>
+		<SubMenu>
+			<title>Home</title>
+			<site>prod</site>
+			<tip>The home page of Catena</tip>
+		</SubMenu>
+		<SubMenu>
+			<title>Administration</title>
+			<site>prod</site>
+			<tip>System, user, and account management</tip>
+			<menuItem>
+				<title>Site Preferences</title>
+				<site>prod</site>
+				<tip>Change your site settings</tip>
+			</menuItem>
+			<menuItem>
+				<title>View Rights</title>
+				<site>prod</site>
+				<tip>View your assigned Rights</tip>
+			</menuItem>
+			<menuItem>
+				<title>Organizations</title>
+				<site>prod</site>
+				<right>SYSTEM_RightsAdmin</right>
+				<tip>Manage Organization details</tip>
+			</menuItem>
+			<menuItem>
+				<title>User Accounts</title>
+				<site>prod</site>
+				<right>SYSTEM_RightsAdmin</right>
+				<tip>Manage user account details</tip>
+			</menuItem>
+			<menuItem>
+				<title>System Rights</title>
+				<site>prod</site>
+				<right>SYSTEM_Support</right>
+				<tip>Manage system rights</tip>
+			</menuItem>
+			<menuItem>
+				<title>Rights Categories</title>
+				<site>prod</site>
+				<right>SYSTEM_Support</right>
+				<tip>Create/modify right categories</tip>
+			</menuItem>
+			<menuItem>
+				<title>Right Groups</title>
+				<site>prod</site>
+				<right>SYSTEM_RightsAdmin</right>
+				<tip>Assign rights to right groups</tip>
+			</menuItem>
+			<menuItem>
+				<title>View Logs</title>
+				<site>prod</site>
+				<right>SYSTEM_GlobalAdmin</right>
+				<tip>View system logs</tip>
+			</menuItem>
+		</SubMenu>
+		<SubMenu>
+			<title>Links</title>
+			<site>prod</site>
+			<tip>External links and companion sites</tip>
+			<menuItem>
+				<title>Task / Flag</title>
+				<site>prod</site>
+				<tip>Link to the Task / Flag main menu</tip>
+				<link>http://taskflag.echostar.com/</link>
+			</menuItem>
+			<menuItem>
+				<title>KnowledgeBase</title>
+				<site>prod</site>
+				<tip>Link to the Shared Knowledge Base Wiki</tip>
+				<link>https://skb.echostar.com/</link>
+			</menuItem>
+			<menuItem>
+				<title>Catena Setup</title>
+				<site>test</site>
+				<tip>Link to Catena Setup</tip>
+				<link>../setup/setup.php</link>
+			</menuItem>
+			<menuItem>
+				<title>Catena API</title>
+				<site>test</site>
+				<tip>Link to Catena API Documentation</tip>
+				<link>http://inv-lx-stgweb1.echostar.com/api/</link>
+			</menuItem>
+		</SubMenu>
+	</menu>

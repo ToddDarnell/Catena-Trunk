@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<screen>
+	<screenTitle>Journal Entry</screenTitle>
+	<!-- Build the box for the background of fields -->
+	<box>
+		<id>jrnAddBox</id>
+		<style>
+			<position>absolute</position>
+			<backgroundColor>Secondary</backgroundColor>
+			<left>0px</left>
+			<top>0px</top>
+			<width>600px</width>
+			<height>300px</height>
+			<color>Primary</color>
+			<fontWeight>bold</fontWeight>
+			<zIndex>1</zIndex>
+		</style>
+		<!-- Journal entry subject (The user the journal entry is about) -->
+		<label>
+			<text>Name</text>
+			<style>
+				<top>10px</top>
+				<left>25px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</label>
+		<label>
+			<id>journalAdd_SelectedUser</id>
+			<style>
+				<top>30px</top>
+				<left>260px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</label>
+		<label>
+			<id>jrnCat_ListTitle</id>
+			<text>Category</text>
+			<style>
+				<top>65px</top>
+				<left>25px</left>
+				<zIndex>2</zIndex>
+				<visibility>hidden</visibility>
+			</style>
+		</label>
+		<select>			
+			<id>jrnCat_List</id>
+			<title>The Category of the Journal Entry</title>
+			<!--<tabIndex>2</tabIndex>-->
+			<style>
+				<top>85px</top>
+				<left>25px</left>
+				<zIndex>2</zIndex>
+				<visibility>hidden</visibility>
+			</style>
+		</select>
+		<label>
+			<text>Event Description</text>
+			<style>
+				<top>120px</top>
+				<left>25px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</label>
+		<textarea>
+			<id>jrnBody</id>
+			<!-- <tabIndex>4</tabIndex> -->
+			<title>The Event Description Body</title>
+			<style>
+				<top>140px</top>
+				<left>25px</left>
+				<width>550px</width>
+				<height>150px</height>
+				<zIndex>2</zIndex>
+			</style>
+		</textarea>
+		<!-- Sends Journal info to server -->
+		<form>
+			<encoding>multipart/form-data</encoding>
+			<method>post</method>
+			<id>journalAdd_submitform</id>
+			<target>fileLoader</target>
+		</form>	
+		<button>
+			<id>jrnSubmit_Button</id>
+			<text>Submit</text>
+			<!-- <tabIndex>5</tabIndex> -->
+			<style>
+				<top>320px</top>
+				<left>400px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</button>
+		<button>
+			<id>jrnClear_Button</id>
+			<text>Clear</text>
+			<!-- <tabIndex>6</tabIndex> -->
+			<style>
+				<top>320px</top>
+				<left>150px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</button>
+	</box>
+</screen>

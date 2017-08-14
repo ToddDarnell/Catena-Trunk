@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<screen>
+	<screenTitle>CSG Request</screenTitle>
+	<box>
+		<style>
+			<position>absolute</position>
+			<backgroundColor>Secondary</backgroundColor>
+			<left>0px</left>
+			<top>0px</top>
+			<width>600px</width>
+			<height>190px</height>
+			<zIndex>1</zIndex>
+			<fontWeight>bold</fontWeight>
+			<color>Primary</color>
+		</style>
+		<label>
+			<text>Receiver</text>
+			<style>
+			<top>10px</top>
+			<left>40px</left>
+			<width>75px</width>
+			<zIndex>2</zIndex>
+			</style>
+		</label>
+		<label>
+			<text>R</text>
+			<style>
+			<top>30px</top>
+			<left>20px</left>
+			<width>75px</width>
+			<zIndex>2</zIndex>
+			</style>
+		</label>
+		<input>
+			<type>text</type>
+			<id>csgrequest_Receiver</id>
+			<maxLength>12</maxLength>
+            <size>12</size>
+			<title>The 12 digit receiver number without the R or -</title>
+			<style>
+				<top>30px</top>
+				<left>35px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</input>
+		<!-- Smart card input boxes -->
+		<label>
+			<text>Smart Card</text>
+			<style>
+				<top>10px</top>
+				<left>190px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</label>
+		<label>
+			<text>S</text>
+			<style>
+				<top>30px</top>
+				<left>170px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</label>
+		<input>
+			<type>text</type>
+			<id>csgrequest_Smartcard</id>
+			<maxLength>12</maxLength>
+            <size>12</size>
+			<title>The 12 digit smart card number without the S or -</title>
+			<style>
+				<top>30px</top>
+				<left>185px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</input>
+		<label>
+			<text>Details</text>
+			<title>Describe the request details</title>
+			<style>
+				<top>70px</top>
+				<left>20px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</label>
+		<textarea>
+			<id>csgrequest_Details</id>
+			<title>Describe the request details</title>
+			<style>
+				<top>90px</top>
+				<left>20px</left>
+				<width>255px</width>
+				<height>100px</height>
+				<zIndex>2</zIndex>
+			</style>
+		</textarea>
+		<input>
+			<type>checkbox</type>
+			<id>csgrequest_AuthBasic</id>
+			<title>T180, HBO, Showtime, Sports pack, DMA Denver</title>
+			<style>
+				<top>90px</top>
+				<left>300px</left>
+				<zIndex>2</zIndex>
+			</style>	
+		</input>
+		<label>
+			<text>Basic Authorization</text>
+			<title>T180, HBO, Showtime, Sports pack, DMA Denver</title>
+			<style>
+				<top>90px</top>
+				<left>320px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</label>
+		<input>
+			<type>checkbox</type>
+			<id>csgrequest_AuthApps</id>
+			<title>Kids Wise, Play Jam, Play TV,Trivia, fantasy sports</title>
+			<style>
+				<top>110px</top>
+				<left>300px</left>
+				<zIndex>2</zIndex>
+			</style>	
+		</input>
+		<label>
+			<text>Applications</text>
+			<title>Kids Wise, Play Jam, Play TV,Trivia, fantasy sports</title>
+			<style>
+				<top>110px</top>
+				<left>320px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</label>
+		<button>
+			<id>csgrequest_addRequestItem</id>
+			<text>Add Receiver</text>
+			<title>Add this receiver to the request list</title>
+			<style>
+				<top>30px</top>
+				<left>460px</left>
+				<width>120px</width>
+				<zIndex>2</zIndex>
+			</style>
+		</button>
+		<button>
+			<id>csgrequest_addInventoryItem</id>
+			<text>Add Inventory</text>
+			<title>Request adding receiver to inventory</title>
+			<style>
+				<top>160px</top>
+				<left>460px</left>
+				<width>120px</width>
+				<zIndex>2</zIndex>
+			</style>
+		</button>
+	</box>
+	<box>
+		<style>
+			<position>absolute</position>
+			<backgroundColor>Secondary</backgroundColor>
+			<left>0px</left>
+			<top>240px</top>
+			<width>600px</width>
+			<height>20px</height>
+			<zIndex>1</zIndex>
+			<fontWeight>bold</fontWeight>
+			<color>Primary</color>
+		</style>
+		<button>
+			<id>csgrequest_clearRequest</id>
+			<text>Clear Request</text>
+			<title>Clear this request</title>
+			<style>
+				<top>0px</top>
+				<left>20px</left>
+				<width>120px</width>
+				<zIndex>2</zIndex>
+			</style>
+		</button>
+		<button>
+			<id>csgrequest_SubmitRequest</id>
+			<text>Submit Request</text>
+			<title>Submit this authorization request for processing</title>
+			<style>
+				<top>0px</top>
+				<left>460px</left>
+				<width>120px</width>
+				<zIndex>2</zIndex>
+			</style>
+		</button>
+	</box>
+	<table>
+		<id>csgrequest_RequestTable</id>
+		<style>
+			<left>0px</left>
+			<top>300px</top>
+			<width>600px</width>
+		</style>
+	</table>
+	<form>
+		<encoding>multipart/form-data</encoding>
+		<method>post</method>
+		<id>csgrequest_submitform</id>
+		<target>fileLoader</target>
+	</form>	
+</screen>

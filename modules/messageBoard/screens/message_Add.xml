@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<screen>
+	<screenTitle>Create New Message</screenTitle>
+	<!-- Build the box for the background of fields -->
+	<box>
+		<id>msgAddBox</id>
+		<style>
+			<position>absolute</position>
+			<backgroundColor>Secondary</backgroundColor>
+			<left>0px</left>
+			<top>0px</top>
+			<width>600px</width>
+			<height>300px</height>
+			<color>Primary</color>
+			<fontWeight>bold</fontWeight>
+			<zIndex>1</zIndex>
+		</style>
+		<!-- Sends Message info to server -->
+		<button>
+			<id>addMsgButton</id>
+			<text>Submit</text>
+			<tabIndex>6</tabIndex>
+			<style>
+				<top>320px</top>
+				<left>400px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</button>
+		<!-- Clears all Message fields -->
+		<button>
+			<id>clearMsgButton</id>
+			<text>Clear</text>
+			<tabIndex>7</tabIndex>
+			<style>
+				<top>320px</top>
+				<left>150px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</button>
+		<!-- Message Subject -->
+		<label>
+			<text>Subject</text>
+			<style>
+				<top>10px</top>
+				<left>25px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</label>
+		<input>
+			<type>text</type>
+			<id>MsgSubject</id>
+			<maxLength>75</maxLength>
+			<title>The full Message subject</title>
+			<tabIndex>1</tabIndex>
+			<style>
+				<top>30px</top>
+				<left>25px</left>
+				<width>250px</width>
+				<zIndex>2</zIndex>
+			</style>
+		</input>
+		<!-- Message Body -->
+		<label>
+			<text>Message</text>
+			<style>
+				<top>80px</top>
+				<left>25px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</label>
+		<textarea>
+			<id>MsgBody</id>
+			<name>MsgBody</name>
+			<maxLength>255</maxLength>
+			<tabIndex>2</tabIndex>
+			<title>The Message body</title>
+			<style>
+            <top>100px</top>
+            <left>25px</left>
+            <width>255px</width>
+            <height>175px</height>
+				<zIndex>2</zIndex>
+			</style>
+		</textarea>   
+		<!-- Message Organization -->
+		<label>
+            <text>Organization</text>
+            <style>
+                <top>10px</top>
+                <left>340px</left>
+                <zIndex>2</zIndex>
+            </style>
+		</label>
+		<select>
+            <id>msgOrgList</id>
+            <name>msgOrgList</name>
+            <title>The organization the Message is directed toward</title>
+            <tabIndex>3</tabIndex>
+            <style>
+        		<top>30px</top>
+        		<left>340px</left>
+        		<zIndex>2</zIndex>
+    		</style>
+		</select>
+		<!-- Message Priority -->
+		<label>
+			<text>Priority</text>
+			<style>
+			<top>80px</top>
+			<left>340px</left>
+			<zIndex>2</zIndex>
+			</style>
+		</label>
+		<select>
+			<id>msgPriList</id>
+			<name>msgPriList</name>
+			<title>The Priority of the Message</title>
+			<tabIndex>4</tabIndex>
+			<style>
+				<top>100px</top>
+				<left>340px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</select>
+		<!-- Message Expiration Date -->  
+		<label>
+			<text>Expiration Date</text>
+			<style>
+			<top>150px</top>
+			<left>340px</left>
+			</style>
+		</label>
+		<calendar>
+			<id>MsgAdd_Calendar</id>
+			<tabIndex>5</tabIndex>
+			<top>170px</top>
+			<left>340px</left>                
+			<required>false</required>          
+		</calendar>
+		<form>
+			<encoding>multipart/form-data</encoding>
+			<method>post</method>
+			<id>messageBoard_submitform</id>
+			<target>fileLoader</target>
+		</form>	
+	</box>
+</screen>

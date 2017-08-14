@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			CSG Request History
+		</screenTitle>
+		<select>
+			<id>csgHistory_Filter</id>
+			<title>Filter History Transactions</title>
+			<style>
+				<top>0px</top>
+				<left>0px</left>
+				<zIndex>2</zIndex>
+			</style>
+		</select>
+		<table>
+			<style>
+				<left>0px</left>
+				<top>20px</top>
+				<width>600px</width>
+			</style>           
+			<tbody>
+				<style>
+					<position>static</position>
+				</style>
+	            <!-- Unread Messages -->
+	            <tr>
+	                <style>
+	                    <position>static</position>
+	                </style>
+	                <td>
+	                    <style>
+	                        <position>static</position>
+	                    </style>
+	                    <table>
+							<style>     
+								<position>static</position>
+								<width>100%</width>
+							</style>
+							<id>csg_history_table</id>
+	                    </table>
+	                </td>
+	            </tr>
+			</tbody>
+		</table>		
+	</screen>

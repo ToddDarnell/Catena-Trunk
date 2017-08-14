@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			Message Board Main
+		</screenTitle>    
+		<table>
+			<style>
+				<left>0px</left>
+				<top>0px</top>
+				<width>600px</width>
+			</style>           
+			<tbody>
+				<style>
+					<position>static</position>
+				</style>
+	            <!-- Unread Messages -->
+	            <tr>
+	                <style>
+	                    <position>static</position>
+	                </style>
+	                <td>
+	                    <style>
+	                        <position>static</position>
+	                    </style>
+	                    <table>
+							<style>     
+								<position>static</position>
+								<width>100%</width>
+							</style>
+							<id>Unread_Messages</id>
+	                    </table>
+	                </td>
+	            </tr>
+	            <!-- Space between the two tables so they aren't right on top of each other--><!--Doesn't Work-->
+	            <tr>
+	                <td rowspan="10"></td>
+	            </tr>                        
+	            <!-- Important Messages -->
+	            <tr>
+	                <style>
+	                   <position>static</position>
+	                </style>
+	                <td>
+	                    <style>
+	                        <position>static</position>
+	                    </style>
+	                    <table>
+	                        <style> 
+	                            <position>static</position>
+	                            <width>100%</width>
+	                        </style>
+	                        <id>Important_Messages</id>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+        </table>		
+     </screen>

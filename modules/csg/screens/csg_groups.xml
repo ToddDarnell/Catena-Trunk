@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			CSG Groups Admin
+		</screenTitle>
+		<button>
+			<text>Submit</text>
+			<style>
+				<top>225px</top>
+				<left>435px</left>
+			</style>
+			<id>csggroup_Submit</id>
+		</button>
+		<page>
+			<style>
+				<fontWeight>bold</fontWeight>
+			</style>
+			<pageTitle>Add Group</pageTitle>
+			<!-- Short Name -->
+			<label>
+				<text>Name</text>
+				<style>
+					<top>60px</top>
+					<left>10px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>csggroup_AddName</id>
+				<maxLength>20</maxLength>
+				<title>Add the group name</title>
+				<style>
+					<top>60px</top>
+					<left>110px</left>
+				</style>
+			</input>
+			<!-- Long Name -->
+			<label>
+				<text>Description</text>
+				<style>
+					<top>90px</top>
+					<left>10px</left>
+				</style>
+			</label>
+			<textArea>
+				<id>csggroup_AddDescription</id>
+				<title>Describe the purpose of the group</title>
+				<style>
+					<top>90px</top>
+					<left>110px</left>
+				</style>
+			</textArea>
+			<!-- Parent select box -->
+			<label>
+				<text>Owner</text>
+				<style>
+					<left>10px</left>
+					<top>150px</top>
+				</style>
+			</label>
+			<select>
+				<id>csggroup_AddOwner</id>
+				<title>Add the owning organization</title>
+				<style>
+					<top>150px</top>
+					<left>110px</left>
+				</style>
+			</select>
+		</page>
+		<!-- Modify an organization screen -->
+		<page>
+			<pageTitle>Modify Group</pageTitle>
+			<label>
+				<text>Group</text>
+				<style>
+					<top>30px</top>
+					<left>10px</left>
+				</style>
+			</label>
+			<select>
+				<id>csggroup_ModifyList</id>
+				<title>The organization to modify</title>
+				<style>
+					<top>30px</top>
+					<left>110px</left>
+				</style>
+			</select>
+
+			<!-- Short Name -->
+			<label>
+				<text>Name</text>
+				<style>
+					<top>60px</top>
+					<left>10px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>csggroup_ModifyName</id>
+				<maxLength>11</maxLength>
+				<title>Add the abbreviated department name</title>
+				<style>
+					<top>60px</top>
+					<left>110px</left>
+				</style>
+			</input>
+			<label>
+				<text>Description</text>
+				<style>
+					<top>90px</top>
+					<left>10px</left>
+				</style>
+			</label>
+			<textArea>
+				<id>csggroup_ModifyDescription</id>
+				<title>Modify the complete department name</title>
+				<style>
+					<top>90px</top>
+					<left>110px</left>
+				</style>
+			</textArea>
+			<label>
+				<text>Owner</text>
+				<style>
+					<left>10px</left>
+					<top>150px</top>
+				</style>
+			</label>
+			<select>
+				<id>csggroup_ModifyOwner</id>
+				<title>Add the parent organization</title>
+				<style>
+					<top>150px</top>
+					<left>110px</left>
+				</style>
+			</select>
+		</page>
+		<!-- Remove an organization screen -->
+		<page>
+			<pageTitle>Remove Group</pageTitle>
+			<!-- Organization select box -->
+			<label>
+				<text>Group</text>
+				<style>
+					<left>10px</left>
+					<top>40px</top>
+				</style>
+			</label>
+			<select>
+				<id>csggroup_RemoveList</id>
+				<title>Select the organization to remove</title>
+				<style>
+					<top>40px</top>
+					<left>110px</left>
+				</style>
+			</select>
+		</page>
+	</screen>

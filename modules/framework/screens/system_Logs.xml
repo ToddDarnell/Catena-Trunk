@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>System Logs</screenTitle>
+		<style>
+			<color>Primary</color>
+			<fontWeight>bold</fontWeight>
+			<position>absolute</position>
+		</style>
+        <table>
+			<style>
+                <width>600px</width>
+				<position>static</position>
+			</style>
+			<id>systemLogs_Table</id>
+        </table>
+	</screen>

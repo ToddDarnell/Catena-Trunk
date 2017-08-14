@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			My Messages
+		</screenTitle>    
+        <table>
+            <style>
+                <left>0px</left>
+                <top>0px</top>
+                <width>600px</width>
+            </style>   
+            <!-- User's Messages -->
+            <id>My_Messages</id>                                    
+        </table>		
+    </screen>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			Right Category Management
+		</screenTitle>
+		<button>
+			<text>Submit</text>
+			<style>
+				<top>225px</top>
+				<left>435px</left>
+			</style>
+			<id>rightCategorySubmit</id>
+		</button>
+		<!-- Add a document type screen -->
+		<page>
+			<style>
+				<fontWeight>bold</fontWeight>
+			</style>
+			<pageTitle>Add Category</pageTitle>
+			<!-- Short Name -->
+			<label>
+				<text>Name</text>
+				<style>
+					<top>10px</top>
+					<left>10px</left>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>rightCategoryAddName</id>
+				<maxLength>20</maxLength>
+				<title>Add the document type name</title>
+				<style>
+					<top>30px</top>
+					<left>10px</left>
+					<width>150px</width>
+				</style>
+			</input>
+			<label>
+				<text>Description</text>
+				<style>
+					<top>60px</top>
+					<left>10px</left>
+				</style>
+			</label>
+			<textarea>
+				<id>rightCategoryAddDescription</id>
+				<title>Add a description for the document type</title>
+				<style>
+					<top>80px</top>
+					<left>10px</left>
+					<width>300px</width>
+					<height>100px</height>
+				</style>
+			</textarea>
+		</page>
+		<!-- Modify a document Type screen -->
+		<page>
+			<pageTitle>Modify Category</pageTitle>
+			<style>
+				<fontWeight>bold</fontWeight>
+			</style>
+			<label>
+				<text>Right Category</text>
+				<style>
+					<top>10px</top>
+					<left>10px</left>
+				</style>
+			</label>
+			<select>
+				<id>rightCategoryModifyList</id>
+				<title>The right category to modify</title>
+				<style>
+					<top>30px</top>
+					<left>10px</left>
+					<width>150px</width>
+				</style>
+			</select>
+			<!-- Document Type Name -->
+			<label>
+				<text>Name</text>
+				<style>
+					<top>60px</top>
+					<left>10px</left>
+					<width>75px</width>
+				</style>
+			</label>
+			<input>
+				<type>text</type>
+				<id>rightCategoryModifyName</id>
+				<maxLength>20</maxLength>
+				<title>Modify the document type name</title>
+				<style>
+					<top>80px</top>
+					<left>10px</left>
+					<width>150px</width>
+				</style>
+			</input>
+			<label>
+				<text>Description</text>
+				<style>
+					<top>110px</top>
+					<left>10px</left>
+				</style>
+			</label>
+			<textarea>
+				<id>rightCategoryModifyDescription</id>
+				<title>Add a description for the document type</title>
+				<style>
+					<top>130px</top>
+					<left>10px</left>
+					<width>300px</width>
+					<height>50px</height>
+				</style>
+			</textarea>
+		</page>
+		<!-- Remove an organization screen -->
+		<page>
+			<pageTitle>Remove Category</pageTitle>
+			<style>
+				<fontWeight>bold</fontWeight>
+			</style>
+			<!-- Organization select box -->
+			<label>
+				<text>Rights Category</text>
+				<style>
+					<left>10px</left>
+					<top>10px</top>
+				</style>
+			</label>
+			<select>
+				<id>rightCategoryRemoveList</id>
+				<title>Select the Document Type to remove</title>
+				<style>
+					<top>30px</top>
+					<left>10px</left>
+				</style>
+			</select>
+		</page>
+	</screen>

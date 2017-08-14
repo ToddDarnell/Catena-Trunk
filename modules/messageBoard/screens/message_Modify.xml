@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<screen>
+		<screenTitle>
+			Modify Message
+		</screenTitle>
+		<!-- Build the box for the background of fields -->
+		<box>
+			<id>msgModifyBox</id>
+			<style>
+				<position>absolute</position>
+				<backgroundColor>Secondary</backgroundColor>
+				<left>0px</left>
+				<top>0px</top>
+				<width>600px</width>
+				<height>300px</height>
+				<color>Primary</color>
+				<fontWeight>bold</fontWeight>
+				<zIndex>1</zIndex>
+			</style>
+			<!-- Sends Message info to server -->
+			<button>
+				<id>addMsgModifyButton</id>
+				<text>Modify</text>
+				<tabIndex>6</tabIndex>
+				<style>
+					<top>320px</top>
+					<left>400px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</button>
+			<!-- Returns user to their referring page -->
+			<button>
+				<text>Back</text>
+				<tabIndex>7</tabIndex>
+				<id>backMsgModifyButton</id>
+				<style>
+					<top>320px</top>
+					<left>150px</left>
+					<zIndex>2</zIndex>
+				</style>
+			</button>
+	      <!-- Message Subject -->
+	      <label>
+	          <text>Subject</text>
+	          <style>
+	              <top>10px</top>
+	              <left>25px</left>
+	              <zIndex>2</zIndex>
+	          </style>
+	       </label>
+	        <input>
+	            <type>text</type>
+	            <id>MsgModifySubject</id>
+	            <maxLength>75</maxLength>
+	            <title>Modify the message subject</title>
+	            <tabIndex>1</tabIndex>
+	            <style>
+	                <top>30px</top>
+	                <left>25px</left>
+	                <width>250px</width>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </input>
+	        <!-- Message Body -->
+	        <label>
+	            <text>Message</text>
+	            <style>
+	                <top>80px</top>
+	                <left>25px</left>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </label>
+	        <textarea>
+		        <id>MsgModifyBody</id>
+		        <title>Modify the Message body</title>
+		        <tabIndex>2</tabIndex>
+		        <style>
+		            <top>100px</top>
+		            <left>25px</left>
+		            <width>255px</width>
+		            <height>175px</height>
+		            <zIndex>2</zIndex>
+		        </style>
+			</textarea>   
+	        <!-- Message Organization -->        
+	        <label>
+	            <text>Organization</text>
+	            <style>
+		            <top>10px</top>
+		            <left>340px</left>
+		            <zIndex>2</zIndex>
+	            </style>
+	        </label>
+	        <select>
+	            <id>msgModifyOrgList</id>
+	            <name>msgModifyOrgList</name>
+	            <title>The organization the Message is directed toward</title>
+	            <tabIndex>3</tabIndex>
+	            <style>
+	                <top>30px</top>
+	        		<left>340px</left>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </select>
+	        <!-- Message Priority -->
+	        <label>
+	            <text>Priority</text>
+	            <style>
+		            <top>80px</top>
+					<left>340px</left>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </label>
+	        <select>
+	            <id>msgModifyPriList</id>
+	            <title>Modify the Message Priority</title>
+	            <tabIndex>4</tabIndex>
+	            <style>
+	                <top>100px</top>
+					<left>340px</left>
+	                <zIndex>2</zIndex>
+	            </style>
+	        </select>
+	        <!-- Message Expiration Date -->  
+		    <label>
+		    	<text>Expiration Date</text>
+			    <style>
+			        <top>150px</top>
+					<left>340px</left>  
+			    </style>
+		    </label>
+			<calendar>
+		        <id>MsgModify_Calendar</id>
+		        <tabIndex>5</tabIndex>
+		        <top>170px</top>
+				<left>340px</left>                
+		        <required>false</required>          
+		    </calendar>
+    	</box>
+	</screen>

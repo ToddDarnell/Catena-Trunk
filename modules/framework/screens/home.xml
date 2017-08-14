@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<screen>
+    <screenTitle>Home</screenTitle>
+    <div>
+        <id>home_Notices</id>
+        <style>
+            <position>absolute</position>
+            <top>0px</top>
+            <left>0px</left>
+        </style>
+    </div>
+</screen>
