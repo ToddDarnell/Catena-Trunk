@@ -1,0 +1,353 @@
+/*
+	Debug window
+	set display to 'none' to hide it
+	set display to 'block' to show it
+*/
+
+.debugNotice
+{
+	background-color:AliceBlue;
+	text-color:#000000;
+	padding:5px;
+	border: 1px solid black;
+
+}
+.debugWarning
+{
+	background-color:pink;
+	text-color:#000000;
+	padding:5px;
+	border: 1px solid black;
+
+}
+.debugError
+{
+	background-color:tomato;
+	text-color:#000000;
+	padding:5px;
+	border: 1px solid black;
+}
+
+#iFileLoader
+{
+    display: none;
+	left: 80%;
+    top: 25%;
+	width:20%;
+	height:20%;
+	overflow:scroll;
+	float:bottom;
+	position:relative;
+}
+
+/****************************************************
+ * Page Styles
+ ****************************************************/
+#divSiteTitle
+{ 
+    position: absolute;
+    top: 12px;
+    left: 20px;
+	text-align:center;
+	font-family:Arial;
+	font-size:27px;
+}
+
+#divPageTitle
+{ 
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    width:100%;
+	height:30px;
+	text-align:center;
+	font:"Britannic Bold", Arial, Helvetica, sans-serif;
+	font-size:24px;
+	z-index:2;
+}
+#divPageTitleBackground
+{
+    position: absolute;
+    top: 45px;
+    left: 0px;
+    width:100%;
+	height:40px;
+	z-index:1;
+}
+#divShortCuts
+{ 
+	float:right;
+ 	font:"Britannic Bold", Arial, Helvetica, sans-serif;
+	font-size:smaller;
+	z-index:2;
+	text-align:right;
+}
+
+html,body
+{
+	background-color:#FFFFFF;
+	font-family:"Times New Roman";
+}
+#divContent
+{
+    position: absolute;
+    top: 160px;
+    left: 175px;
+    width: 550px;
+	height:20px;
+}
+/****************************************************
+ * Main Menu Styles
+ ****************************************************/
+div.menuBlock
+{
+	position: absolute;
+	top: 125px;
+	width:150px;
+	left: 2%;
+	padding:0;
+	margin:0;
+	font-family:"Arial";
+}
+div.menu
+{
+	margin:0;
+	margin-top:-1;
+	margin-left:-1;
+	margin-right:-1;
+}
+div.menuTitle
+{
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	cursor: hand;
+	font-weight:bold;
+	text-decoration: bold;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:10px;
+	padding-right:10px;
+	margin:0;
+}
+div.menuTitleList
+{
+	margin: 0;
+	padding: 0;
+	overflow:hidden;
+	padding-top:2px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:2px;
+
+}
+div.menuListItem
+{
+	cursor: pointer;
+	cursor: hand;
+	margin-bottom:2px;
+	vertical-align: bottom;
+	padding-top:2px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-bottom:2px;
+	text-align: center;
+	font-size: 14px;
+}
+div.menuListLink
+{
+	cursor: pointer;
+	cursor: hand;
+	margin-bottom:2px;
+	vertical-align: bottom;
+	padding-top:2px;
+	padding-left:3px;
+	padding-right:3px;
+	padding-bottom:2px;
+	text-align: center;
+	font-size: 14px;
+	text-decoration:underline;
+}
+/****************************************************
+ * Css for the inventory page
+ ****************************************************/
+DL.inventoryBlock
+{
+	font-family:"Arial";
+	font-size: 16px;
+	margin:0;
+}
+DT.inventoryTitle
+{
+	padding-top:5px;
+	padding-bottom:5px;
+}
+SPAN.inventoryTitle
+{
+	text-decoration: bold;
+	padding-left:10px;
+}
+dd.inventoryTitleList
+{
+	padding:0;
+	margin: 0;
+}
+ul.inventoryReceiverList
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: left;
+}
+li.inventoryReceiverListItem
+{
+	margin-top:5px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom:5px;
+	padding: 5px;
+	list-style-type: none;
+	text-align: left;
+}
+
+/****************************************************
+ * Notification Styles
+ ****************************************************/
+
+#divNotice {
+    padding: 4px;
+    background-repeat: no-repeat;
+    background-position: 4px 4px;
+    padding-left: 30px;
+    font-family: Arial,Helvetica,Sans-Serif;   
+    position: absolute;
+    top: 95px;
+    left: 175px;
+    width:600px;
+    z-index:94;
+	align:center;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div.info
+{
+    background-color: #F7FFCD;
+    background-image: url(../image/icon_info.gif);
+    border: 1px solid #A5A54A;
+}
+
+div.error
+{
+    background-color: #FFE6E6;
+    background-image: url(../image/icon_alert.gif);   
+    border: 1px solid red;	
+}
+/*
+	Keeps track of all style elements for the catena management screens
+*/
+div.pageTitle
+{
+	cursor: pointer;
+	cursor: hand;
+	text-decoration:underline;
+	position:absolute;
+}
+div.pageTitleFocused
+{
+	position:absolute;
+	z-index:6;
+}
+div.page
+{
+	position:absolute;
+	left: 140px;
+    top: 0px;
+	width:380px;
+	height:200px;
+	z-index:5;
+}
+div.appScreen
+{
+	position:absolute;
+	width:550px;
+	height:400px;
+}
+#OffScreenPage
+{
+    display: none;
+	position:absolute;
+	left: 0px;
+    top: 0px;
+	width:5px;
+	height:9px;
+}
+
+td.link
+{
+	cursor: pointer;
+	cursor: hand;
+	text-decoration:underline;
+}
+div.link
+{
+	cursor: pointer;
+	cursor: hand;
+	text-decoration:underline;
+}
+span.link
+{
+	cursor: pointer;
+	cursor: hand;
+	text-decoration:underline;
+}
+TH.link
+{
+	cursor: pointer;
+	cursor: hand;
+	text-decoration:underline;
+}
+label.versionPopupBox
+{
+	cursor: pointer;
+	cursor: hand;
+	text-align: center;
+	text-Decoration: underline;
+}
+
+.system_tree
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	white-space: nowrap;
+}
+.system_tree img {
+	border: 0px;
+	vertical-align: middle;
+}
+.system_tree a {
+	color: #333;
+	text-decoration: none;
+}
+.system_tree a.node, .system_tree a.nodeSel {
+	white-space: nowrap;
+	padding: 1px 2px 1px 2px;
+}
+.system_tree a.node:hover, .system_tree a.nodeSel:hover {
+	color: #333;
+	text-decoration: underline;
+}
+.system_tree a.nodeSel {
+	background-color: #c0d2ec;
+}
+.system_tree .clip {
+	overflow: hidden;
+}
+div.popupFade
+{
+	display: block;
+	position: absolute;
+	background-color: black;
+	opacity:.50;
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+}

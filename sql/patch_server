@@ -1,0 +1,254 @@
+#!/bin/bash
+# $1 should be the branch we're going to patch to
+# $2 should be the sql patch file, not including path. For example T003.sql
+#
+clear
+#	Set the default site path to dev
+
+site_path=""
+svn_export_path=file:///var/svnroot/catena/trunk
+databaseName=catena	# database name. the default is catena
+site_socket=""	# the socket used to connect to the database
+
+server_set=0		# flag to make sure multiple server types are not set on the command line
+site_name=""		# site name. used to display values to the user
+patch_sql=0		# set to true to process the sql code only. Good for patching the database without uploading files
+patch_site=0		# set to true if the site needs patching
+version_set=0		#	flag to make sure the verison type is set on the command line
+
+#display the command line options
+function commandLine()
+{
+	if [ "$1" != "" ]
+		then
+			echo ""
+			echo "ERROR: $1"
+			echo ""
+	fi
+
+	echo ""
+	echo "command line options:"
+	echo ""
+	echo "--h			Command line help"
+	echo "--help			Command line help"
+	echo "--sql [file]		The sql file name which should patch the database"
+	echo "--sql_only [file]	Upload only the sql file. ignores the server and version types"
+	echo "--database		The name of the database to patch"
+	echo ""
+	echo "One of the following server types:"
+	echo "--dev			Patch to the dev server"
+	echo "--prod			Patch to the live server"
+	echo "--test			Patch to the test server"
+	echo ""
+	echo "One of the following version types:"
+	echo "--trunk			Use the trunk code to patch the server"
+	echo "--branch [version]	Use a branch of [version] to patch the server"
+	echo "--tag [tag]		Use a tag of [version] to patch the server"
+
+	exit
+}
+
+if [ $# -eq 0 ]; then
+	commandLine "No command line options set"
+fi
+
+until [ -z "$1" ]  # Until all parameters used up...
+do
+	case "$1" in
+		'--help')
+			commandLine
+			;;
+		'--h')
+			commandLine
+			;;
+		'--sql_only')
+			# the next value should be the name of the
+			shift
+			if [ "$1" = "" ]; then
+				commandLine "An SQL file name is expected"
+			fi
+			# sql file
+			sql_file_name=$1
+			patch_sql=1
+			site_socket=/var/lib/mysql/mysql.sock
+			shift
+			;;
+		'--sql')
+			# the next value should be the name of the sql file name
+			# this patch file is expected to be in the code in the sql file folder
+			shift
+			if [ "$1" = "" ]; then
+				commandLine "An SQL file name is expected"
+			fi
+			# sql file
+			sql_file_name=$1
+			patch_sql=1
+			shift
+			;;
+		'--database')
+			shift
+			# the next value should be the database name
+			if [ "$1" = "" ]; then
+				commandLine "A database name is expected"
+			fi
+			
+			databaseName=$1
+			shift
+			;;
+		'--dev')
+			if [ $server_set == 1 ]; then
+				commandLine "Multiple server types not allowed"
+			fi
+			# retrieve the destination server
+			site_path=/var/www/html/http/dev
+			site_name="dev"
+			server_set=1
+			site_socket=/var/lib/mysql/mysql.sock
+			shift
+			;;
+		'--test')
+			if [ $server_set == 1 ]; then
+				commandLine "Multiple server types not allowed"
+			fi
+			site_path=/var/www/html/http/test
+			server_set=1
+			site_name="test"
+			site_socket=/var/lib/mysql1/mysql.sock
+			shift
+			;;
+		'--prod')
+			if [ $server_set == 1 ]; then
+				commandLine "Multiple server types not allowed"
+			fi
+			site_path=/var/www/html/http/catena
+			site_socket=/var/lib/mysql/mysql.sock
+			server_set=1
+			site_name="prod"
+			shift
+			;;
+		'--branch')
+			# make sure the tag isn't already set
+			if [ $version_set == 1 ]; then
+				commandLine "Multiple version types not allowed"
+			fi
+			version_set=1
+			patch_site=1
+
+			# retrieve the next value
+			shift
+			
+			if [ "$1" = "" ]; then
+				commandLine "A branch version needed"
+			fi
+			svn_export_path=file:///var/svnroot/catena/branches/$1
+			shift
+			;;
+		'--trunk')
+			# make sure the tag isn't already set
+			if [ $version_set == 1 ]; then
+				commandLine "Multiple version types not allowed"
+			fi
+			version_set=1
+			patch_site=1
+			svn_export_path=file:///var/svnroot/catena/trunk
+			shift
+			;;
+		'--tag')
+			# make sure the tag isn't already set
+			if [ $version_set == 1 ]; then
+				commandLine "Multiple version types not allowed"
+			fi
+			version_set=1
+			patch_site=1
+
+			shift
+			if [ "$1" = "" ]; then
+				commandLine "A tag version needed"
+			fi
+			#svn_export_path=file:///var/svnroot/catena/tags/$1
+			svn_export_path=svn+ssh://$USER@inv-lx-stgweb1/var/svnroot/catena/tags/$1
+			shift
+			;;
+		*)
+			commandLine "Unknown command line value [$1]"
+	esac
+done
+
+#
+# verify all values are set
+#
+if [ $patch_site -eq 1 ]; then
+	if [ $server_set -eq 0 ]; then
+		commandLine "No server selected";
+	fi
+	if [ $version_set -eq 0 ]; then
+		commandLine "No version type selected"
+	fi
+fi
+
+if [ $patch_sql -eq 1 ]; then
+	# have to check for slashes. If no slashes, use the path in the site 
+	if [ "$site_path" != "" ]; then
+		sql_file_path=$site_path/sql/$sql_file_name
+	else
+		# sql only-- assume entire file path is here
+		sql_file_path=$sql_file_name
+	fi
+fi
+
+# now set up the back up values
+site_file_backup=/home/$USER/catena_backup$(date +%Y%m%d)
+sql_file_backup=/home/$USER/catena_backup_$(date +%Y%m%d).sql
+
+# patch the site
+
+if [ $patch_site -eq 1 ]; then
+	
+	# Back up the existing site
+	
+	echo Backing up $site_name to : $site_file_backup...
+	rm -r -f $site_file_backup
+	mkdir $site_file_backup
+	mv $site_path $site_file_backup
+
+	#remove the existing site
+		
+	echo Removing existing site...
+	rm -r -f $site_path
+	echo uploading $1 files to site....
+	
+	# retrieve the new files
+	
+	svn --quiet export $svn_export_path $site_path
+	echo Updating file access rights...
+	#change the rights so the developer group may still change the files
+	chmod ug+rwx -R $site_path
+fi
+
+# patch the sql files
+
+if [ $patch_sql -eq 1 ]; then
+
+	# back up the sql database
+
+	echo Backing up database to: $site_file_backup...
+	echo Use database password for backup.
+	# backup the current website
+	/usr/bin/mysqldump --skip-lock-tables --skip-add-locks -h localhost -u $USER -p $databaseName > $sql_file_backup
+
+	# patch the sql database
+	
+	echo Patching site with $sql_file_path.... Use database password.
+	mysql --user=$USER -p --database=$databaseName --socket=$site_socket < $sql_file_path
+	
+fi
+
+if [ $patch_site -eq 1 ]; then
+	echo Removing the sql upload code...
+	#remove the site patch sql code.
+	# if we downloaded a site, then remove the sql files whether we uploaded them or not.
+	rm -r -f $site_path/sqlUpload
+	rm -r -f $site_path/sql
+fi
+
+echo "Site updated, $USER."
